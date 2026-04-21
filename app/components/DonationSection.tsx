@@ -4,39 +4,39 @@ import styles from "./DonationSection.module.css";
 
 const tiers = [
   {
-    id: "tier-5000",
-    amount: "₦5,000",
-    usd: "≈ $3",
-    title: "Antenatal Care",
-    impact: "Funds one antenatal clinic visit — a potentially life-saving check-up for a mother who wouldn't otherwise afford it.",
-    items: ["Blood pressure screening", "Iron supplements", "Birth planning session"],
+    id: "tier-25",
+    amount: "$25",
+    usd: "≈ ₦40,000",
+    title: "Essential Kits",
+    impact: "Provides safe birthing kits to mothers in need and pays for 4 ante-natal visits.",
+    items: ["Safe birthing kit", "4 Ante-natal visits", "Maternal screening"],
     badge: null,
     color: "var(--clr-primary-light)",
   },
   {
-    id: "tier-20000",
-    amount: "₦20,000",
-    usd: "≈ $13",
-    title: "Safe Delivery",
-    impact: "Covers the full facility delivery cost for one mother — including a skilled birth attendant and emergency readiness.",
-    items: ["Skilled birth attendant", "Delivery kit & supplies", "2-night stay + postnatal check"],
+    id: "tier-50",
+    amount: "$50",
+    usd: "≈ ₦80,000",
+    title: "Full Term Care",
+    impact: "Funds prenatal care for a mother for an entire term and financial incentives.",
+    items: ["Full prenatal term care", "Financial incentives", "Term-long monitoring"],
     badge: "Most Chosen",
     color: "var(--clr-primary)",
   },
   {
-    id: "tier-50000",
-    amount: "₦50,000",
-    usd: "≈ $33",
-    title: "Emergency Care",
-    impact: "Provides emergency obstetric intervention for a high-risk pregnancy — the difference between life and loss.",
-    items: ["Emergency transport", "Specialist consultation", "Full birth & postnatal care"],
+    id: "tier-100",
+    amount: "$100",
+    usd: "≈ ₦160,000",
+    title: "Community Impact",
+    impact: "Trains community health workers to deliver critical care and resources and supports two women.",
+    items: ["Health worker training", "Support for 2 women", "Critical care delivery"],
     badge: "High Impact",
     color: "var(--clr-primary-dark)",
   },
 ];
 
 export default function DonationSection() {
-  const [selected, setSelected] = useState("tier-20000");
+  const [selected, setSelected] = useState("tier-50");
   const ref = useRef<HTMLElement>(null);
 
   useEffect(() => {
