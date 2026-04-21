@@ -1,0 +1,66 @@
+"use client";
+import { useState, useEffect } from "react";
+import styles from "./Header.module.css";
+
+export default function Header() {
+  const [scrolled, setScrolled] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  useEffect(() => {
+    const handler = () => setScrolled(window.scrollY > 40);
+    window.addEventListener("scroll", handler, { passive: true });
+    return () => window.removeEventListener("scroll", handler);
+  }, []);
+
+  return (
+    <header className={`${styles.header} ${scrolled ? styles.scrolled : ""}`}>
+      <div className={`container ${styles.inner}`}>
+        {/* Logo */}
+        <a href="/" className={styles.logo} aria-label="MRHR Collective home">
+          <img 
+            src="https://mrhrcollective.org/wp-content/uploads/2025/01/MRH-Logo-White-1-1024x546.png" 
+            alt="MRH Collective" 
+            className={styles.logoImage}
+          />
+        </a>
+
+        {/* Desktop Nav */}
+        <nav className={styles.nav} aria-label="Primary navigation">
+          <a href="#impact" className={styles.navLink}>Our Impact</a>
+          <a href="#how-it-works" className={styles.navLink}>What We Do</a>
+          <a href="#get-involved" className={styles.navLink}>Get Involved</a>
+          <a href="https://mrhrcollective.org/news/" className={styles.navLink}>Insights</a>
+        </nav>
+
+        {/* CTA */}
+        <div className={styles.actions}>
+          <a href="#donate" className={`btn btn-primary ${styles.donateBtn}`} id="header-donate-cta">
+            PROTECT A MOTHER
+          </a>
+          {/* Hamburger */}
+          <button
+            className={styles.hamburger}
+            aria-label={menuOpen ? "Close menu" : "Open menu"}
+            aria-expanded={menuOpen}
+            onClick={() => setMenuOpen(!menuOpen)}
+          >
+            <span className={menuOpen ? styles.barOpen : ""}></span>
+            <span className={menuOpen ? styles.barOpen : ""}></span>
+            <span className={menuOpen ? styles.barOpen : ""}></span>
+          </button>
+        </div>
+      </div>
+
+      {/* Mobile menu */}
+      <div className={`${styles.mobileMenu} ${menuOpen ? styles.mobileMenuOpen : ""}`}>
+        <a href="#impact" className={styles.mobileLink} onClick={() => setMenuOpen(false)}>Our Impact</a>
+        <a href="#how-it-works" className={styles.mobileLink} onClick={() => setMenuOpen(false)}>What We Do</a>
+        <a href="#get-involved" className={styles.mobileLink} onClick={() => setMenuOpen(false)}>Get Involved</a>
+        <a href="https://mrhrcollective.org/news/" className={styles.mobileLink} onClick={() => setMenuOpen(false)}>Insights</a>
+        <a href="#donate" className={`btn btn-primary ${styles.mobileDonate}`} onClick={() => setMenuOpen(false)}>
+          PROTECT A MOTHER
+        </a>
+      </div>
+    </header>
+  );
+}

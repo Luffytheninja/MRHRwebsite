@@ -1,0 +1,133 @@
+.section {
+  padding: 5rem 0;
+  background: #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: center;
+}
+
+/* Left: tension card */
+.tensionCard {
+  background: #fff;
+  border-radius: 8px;
+  padding: 2.5rem;
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--clr-border);
+}
+
+.tensionHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.75rem;
+}
+.alertIcon { font-size: 1.25rem; }
+.tensionLabel {
+  font-weight: 700;
+  font-size: 0.8125rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--clr-primary);
+}
+
+.tensionStats {
+  display: flex;
+  flex-direction: column;
+  gap: 1.125rem;
+  margin-bottom: 1.75rem;
+}
+.tensionRow {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-size: 0.8125rem;
+  color: var(--clr-text-muted);
+  font-weight: 500;
+}
+.tensionBar {
+  height: 6px;
+  background: var(--clr-bg-soft);
+  border-radius: 3px;
+  overflow: hidden;
+}
+.tensionFill {
+  height: 100%;
+  border-radius: 3px;
+  animation: growBar 1.5s var(--ease-smooth) forwards;
+  transform-origin: left;
+}
+@keyframes growBar {
+  from { width: 0 !important; }
+}
+
+.tensionClock {
+  display: flex;
+  align-items: center;
+  gap: 0.875rem;
+  padding: 1rem 1.25rem;
+  background: rgba(124,45,59,0.06);
+  border-radius: 12px;
+  border-left: 3px solid var(--clr-accent);
+  font-size: 0.875rem;
+  color: var(--clr-text);
+  line-height: 1.5;
+}
+.clockPulse {
+  width: 12px; height: 12px;
+  background: var(--clr-accent);
+  border-radius: 50%;
+  flex-shrink: 0;
+  animation: pulse 1.2s ease-in-out infinite;
+}
+@keyframes pulse {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.4); opacity: 0.7; }
+}
+
+/* Right: narrative */
+.right {}
+
+.title {
+  font-size: clamp(2rem, 3.5vw, 2.75rem);
+  color: var(--clr-text);
+  margin-bottom: 0.25rem;
+}
+
+.body {
+  font-size: 1rem;
+  color: var(--clr-text-muted);
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+
+.pullQuote {
+  display: flex;
+  gap: 1.25rem;
+  margin: 2rem 0;
+}
+.pullLine {
+  width: 3px;
+  background: var(--clr-primary);
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+.pullQuote p {
+  font-family: var(--font-serif);
+  font-size: 1.125rem;
+  font-style: italic;
+  color: var(--clr-primary-dark);
+  line-height: 1.65;
+}
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+}
