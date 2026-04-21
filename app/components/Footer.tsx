@@ -20,7 +20,7 @@ export default function Footer() {
               <p className={styles.tagline}>
                 Every mother&apos;s life is a legacy worth protecting. We are a collective dedicated to ensuring no birth story in Nigeria ends in silence.
               </p>
-              <a href="#donate" className={`btn btn-primary ${styles.footerDonate}`} id="footer-donate-cta">
+              <a href="#donate" className={`btn btn-accent ${styles.footerDonate}`} id="footer-donate-cta">
                 PROTECT A MOTHER
               </a>
             </div>

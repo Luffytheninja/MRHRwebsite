@@ -185,6 +185,18 @@ h1, h2, h3, h4 {
   color: #fff;
 }
 
+.btn-accent {
+  background: var(--clr-accent-pink);
+  color: #fff;
+  border-color: var(--clr-accent-pink);
+}
+.btn-accent:hover {
+  background: #B8006A;
+  border-color: #B8006A;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
 /* ── Section label ────────────────────────────────── */
 .section-label {
   display: inline-flex;
