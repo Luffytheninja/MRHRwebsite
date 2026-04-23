@@ -4,10 +4,11 @@ import { useState, useEffect, useRef } from "react";
 import styles from "./Hero.module.css";
 
 const slideImages = [
-  "https://mrhrcollective.org/wp-content/uploads/2025/10/new-one-e1762852427797.jpg",
-  "https://mrhrcollective.org/wp-content/uploads/2025/01/iyalogu4.png",
-  "https://mrhrcollective.org/wp-content/uploads/2025/01/iyalogu2.png",
-  "https://mrhrcollective.org/wp-content/uploads/2025/01/iyalogu.png",
+  "/images/hero/hero-1.png",
+  "/images/hero/hero-2.png",
+  "/images/hero/hero-3.png",
+  "/images/hero/hero-4.png",
+  "/images/hero/hero-5.png",
 ];
 
 export default function Hero() {
