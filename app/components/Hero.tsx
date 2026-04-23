@@ -34,6 +34,8 @@ export default function Hero() {
       const isDecimal = target % 1 !== 0;
 
       const tick = (now: number) => {
+        const el = counterRefs.current[i];
+        if (!el) return;
         const elapsed = now - start;
         const progress = Math.min(elapsed / duration, 1);
         const eased = 1 - Math.pow(1 - progress, 3);

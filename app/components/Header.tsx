@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import Image from "next/image";
 import { useState, useEffect } from "react";
 import styles from "./Header.module.css";
@@ -17,7 +18,7 @@ export default function Header() {
     <header className={`${styles.header} ${scrolled ? styles.scrolled : ""}`}>
       <div className={`container ${styles.inner}`}>
         {/* Logo */}
-        <a href="/" className={styles.logo} aria-label="MRHR Collective home">
+        <Link href="/" className={styles.logo} aria-label="MRHR Collective home">
           <Image 
             src="https://mrhrcollective.org/wp-content/uploads/2025/01/MRH-Logo-White-1-1024x546.png" 
             alt="MRH Collective" 
@@ -26,7 +27,7 @@ export default function Header() {
             className={styles.logoImage}
             priority
           />
-        </a>
+        </Link>
 
         {/* Desktop Nav */}
         <nav className={styles.nav} aria-label="Primary navigation">

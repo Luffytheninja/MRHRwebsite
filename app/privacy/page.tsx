@@ -1,4 +1,3 @@
-import styles from "./Legal.module.css";
 
 export default function PrivacyPage() {
   return (
