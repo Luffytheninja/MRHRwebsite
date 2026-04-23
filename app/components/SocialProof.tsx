@@ -41,7 +41,7 @@ export default function SocialProof() {
   }, []);
 
   return (
-    <section ref={ref} className={styles.section}>
+    <section id="social-proof" ref={ref} className={styles.section}>
       <div className="container">
         {/* Partners */}
         <div className={`${styles.partnerBlock} fade-in`}>

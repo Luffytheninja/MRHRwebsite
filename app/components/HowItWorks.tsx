@@ -91,7 +91,7 @@ export default function HowItWorks() {
 
         <div className={`${styles.bottomCta} fade-in`}>
           <p>Want to understand our full intervention model?</p>
-          <a href="#how-it-works" className="btn btn-outline">Read Our Strategy</a>
+          <a href="https://mrhrcollective.org/what-we-do/" target="_blank" rel="noopener noreferrer" className="btn btn-outline">Read Our Strategy</a>
         </div>
       </div>
     </section>
