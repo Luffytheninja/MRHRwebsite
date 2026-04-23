@@ -15,7 +15,7 @@ const paths = [
     title: "Lend Your Voice",
     description: "Our health advocates work at the heart of the community. No medical degree required — just a commitment to survival.",
     cta: "Join the Network",
-    href: "mailto:info@mrhr.org?subject=Volunteer Application",
+    href: "mailto:info@mrhrcollective.org?subject=Volunteer Application",
   },
   {
     id: "partner",
@@ -29,7 +29,7 @@ const paths = [
     title: "Forge a Legacy",
     description: "Align your organisation with measurable maternal health outcomes. Together, we can transform whole healthcare systems.",
     cta: "Partner With Us",
-    href: "mailto:info@mrhr.org?subject=Partnership Inquiry",
+    href: "mailto:info@mrhrcollective.org?subject=Partnership Inquiry",
   },
   {
     id: "spread",
@@ -42,9 +42,9 @@ const paths = [
       </svg>
     ),
     title: "Join the Narrative",
-    description: "AWareness is the first step toward action. Share our mission and help us reach those who can help us save a life.",
+    description: "Awareness is the first step toward action. Share our mission and help us reach those who can help us save a life.",
     cta: "Share the Mission",
-    href: "https://mrhr.org",
+    href: "https://mrhrcollective.org",
   },
 ];
 

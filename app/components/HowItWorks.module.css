@@ -95,7 +95,7 @@
   font-weight: 600;
   letter-spacing: 0.04em;
   padding: 0.3rem 0.75rem;
-  background: rgba(124,45,59,0.07);
+  background: var(--clr-primary-surface);
   color: var(--clr-primary);
   border-radius: 100px;
   text-transform: uppercase;

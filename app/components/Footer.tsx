@@ -1,3 +1,4 @@
+import Image from "next/image";
 import styles from "./Footer.module.css";
 
 export default function Footer() {
@@ -11,9 +12,11 @@ export default function Footer() {
             {/* Brand */}
             <div className={styles.brand}>
               <div className={styles.logo}>
-                <img 
+                <Image 
                   src="https://mrhrcollective.org/wp-content/uploads/2025/01/MRH-Logo-White-1-1024x546.png" 
                   alt="MRH Collective" 
+                  width={200}
+                  height={106}
                   className={styles.logoImage}
                 />
               </div>
@@ -39,9 +42,9 @@ export default function Footer() {
             <div className={styles.navGroup}>
               <p className={styles.navTitle}>Collaborate</p>
               <nav>
-                <a href="mailto:volunteer@mrhr.org" className={styles.navLink}>Lend Your Voice</a>
-                <a href="mailto:partnerships@mrhr.org" className={styles.navLink}>Forge a Legacy</a>
-                <a href="mailto:info@mrhr.org" className={styles.navLink}>Contact Us</a>
+                <a href="mailto:volunteer@mrhrcollective.org" className={styles.navLink}>Lend Your Voice</a>
+                <a href="mailto:partnerships@mrhrcollective.org" className={styles.navLink}>Forge a Legacy</a>
+                <a href="mailto:info@mrhrcollective.org" className={styles.navLink}>Contact Us</a>
               </nav>
             </div>
 
@@ -77,8 +80,8 @@ export default function Footer() {
           <div className={styles.bottomInner}>
             <p>© {currentYear} MRHR Collective. All rights reserved.</p>
             <div className={styles.legalLinks}>
-              <a href="#">Privacy Policy</a>
-              <a href="#">Terms of Use</a>
+              <a href="/privacy">Privacy Policy</a>
+              <a href="/terms">Terms of Use</a>
             </div>
           </div>
         </div>

@@ -1,18 +1,33 @@
 "use client";
+import Image from "next/image";
 import { useState, useEffect, useRef } from "react";
 import styles from "./Hero.module.css";
 
+const slideImages = [
+  "https://mrhrcollective.org/wp-content/uploads/2025/10/new-one-e1762852427797.jpg",
+  "https://mrhrcollective.org/wp-content/uploads/2025/01/iyalogu4.png",
+  "https://mrhrcollective.org/wp-content/uploads/2025/01/iyalogu2.png",
+  "https://mrhrcollective.org/wp-content/uploads/2025/01/iyalogu.png",
+];
+
 export default function Hero() {
   const counterRefs = useRef<(HTMLSpanElement | null)[]>([]);
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  useEffect(() => {
+    const slideTimer = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % slideImages.length);
+    }, 6000);
+    return () => clearInterval(slideTimer);
+  }, []);
 
   useEffect(() => {
     const targets = [7883, 99.9, 80];
     const suffixes = ["+", "%", "%"];
     const durations = [2000, 2000, 2000];
 
-    counterRefs.current.forEach((el, i) => {
-      if (!el) return;
-      const target = targets[i];
+    targets.forEach((target, i) => {
+      const el = counterRefs.current[i];
       const suffix = suffixes[i];
       const duration = durations[i];
       const start = performance.now();
@@ -33,11 +48,19 @@ export default function Hero() {
   return (
     <section className={styles.hero} aria-label="Hero — Childbirth should be a celebration of life">
       <div className={styles.heroBg} aria-hidden="true">
-        <img 
-          src="https://mrhrcollective.org/wp-content/uploads/2025/02/AdobeStock_911734917.jpeg" 
-          alt="" 
-          className={styles.bgImg} 
-        />
+        {slideImages.map((src, i) => (
+          <Image
+            key={src}
+            src={src}
+            alt=""
+            fill
+            priority={i === 0}
+            sizes="100vw"
+            quality={85}
+            className={`${styles.bgImg} ${i === currentSlide ? styles.visibleSlide : ""}`}
+            style={{ objectFit: 'cover' }}
+          />
+        ))}
         <div className={styles.bgOverlay} />
       </div>
       
@@ -63,6 +86,15 @@ export default function Hero() {
             <a href="#impact" className={`btn btn-white ${styles.secondaryCta}`} id="hero-learn-cta">
               OUR JOURNEY
             </a>
+          </div>
+
+          <div className={styles.stats}>
+            {[["7,883+", "Safe Birth Stories"], ["99.9%", "Survival Rate"], ["80%", "Facility Deliveries"]].map(([val, lbl], i) => (
+              <div key={lbl} className={styles.statItem}>
+                <span ref={el => { counterRefs.current[i] = el; }}>{val}</span>
+                <p>{lbl}</p>
+              </div>
+            ))}
           </div>
         </div>
       </div>

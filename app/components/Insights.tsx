@@ -67,8 +67,8 @@ export default function Insights() {
               </div>
               <h3 className={styles.articleTitle}>{a.title}</h3>
               <p className={styles.articleExcerpt}>{a.excerpt}</p>
-              <a href={`#insight-${a.id}`} className={styles.readLink}>
-                Read Article
+              <a href="https://mrhrcollective.org/news/" className={styles.readLink}>
+                Browse Insights
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2.5}><path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
               </a>
             </article>

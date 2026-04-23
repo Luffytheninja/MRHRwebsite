@@ -11,7 +11,7 @@ interface Stat {
   icon: React.ReactNode;
 }
 
-const stats = [
+const stats: Stat[] = [
   {
     value: 7883,
     suffix: "",

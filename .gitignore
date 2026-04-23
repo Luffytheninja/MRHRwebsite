@@ -21,8 +21,12 @@
 /build
 
 # misc
-.DS_Store
-*.pem
+# Dev artifacts
+CLAUDE.md
+AGENTS.md
+fetch_assets.js
+mrhr_home*.html
+mrhr_raw.html
 
 # debug
 npm-debug.log*

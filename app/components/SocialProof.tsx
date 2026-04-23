@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import { useEffect, useRef } from "react";
 import styles from "./SocialProof.module.css";
 
@@ -48,7 +49,13 @@ export default function SocialProof() {
           <div className={styles.partnerRow}>
             {partners.map((p) => (
               <div key={p.name} className={styles.partnerChip} title={p.name}>
-                <img src={p.logo} alt={p.name} className={styles.partnerLogo} />
+                <Image 
+                  src={p.logo} 
+                  alt={p.name} 
+                  width={140}
+                  height={60}
+                  className={styles.partnerLogo} 
+                />
               </div>
             ))}
           </div>

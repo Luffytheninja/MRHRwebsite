@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import { useState, useEffect } from "react";
 import styles from "./Header.module.css";
 
@@ -17,10 +18,13 @@ export default function Header() {
       <div className={`container ${styles.inner}`}>
         {/* Logo */}
         <a href="/" className={styles.logo} aria-label="MRHR Collective home">
-          <img 
+          <Image 
             src="https://mrhrcollective.org/wp-content/uploads/2025/01/MRH-Logo-White-1-1024x546.png" 
             alt="MRH Collective" 
+            width={120}
+            height={64}
             className={styles.logoImage}
+            priority
           />
         </a>
 

@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import { useEffect, useRef } from "react";
 import styles from "./HumanStory.module.css";
 
@@ -34,24 +35,18 @@ export default function HumanStory() {
           <div className={`${styles.visual} fade-in`} aria-hidden="true">
             <div className={styles.portraitCard}>
               <div className={styles.portraitBg}>
-                <img src="https://mrhrcollective.org/wp-content/uploads/2025/02/AdobeStock_911734917.jpeg" alt="Amara Okafor" className={styles.portraitImg} />
+                <Image 
+                  src="https://mrhrcollective.org/wp-content/uploads/2025/01/iyalogu2.png" 
+                  alt="A mother supported by MRHR Collective — Illustrative" 
+                  width={600}
+                  height={800}
+                  quality={85}
+                  className={styles.portraitImg} 
+                />
               </div>
               <div className={styles.portraitOverlay}>
-                <p className={styles.portraitName}>Amara Okafor</p>
-                <p className={styles.portraitMeta}>28 years old · Lagos Island</p>
-              </div>
-            </div>
-            <div className={styles.storyPath}>
-              <div className={`${styles.pathNode} ${styles.pathDanger}`}>
-                <span>The Crisis</span>
-              </div>
-              <div className={styles.pathLine} />
-              <div className={`${styles.pathNode} ${styles.pathCare}`}>
-                <span>The Lifeline</span>
-              </div>
-              <div className={styles.pathLine} />
-              <div className={`${styles.pathNode} ${styles.pathSafe}`}>
-                <span>The Celebration</span>
+                <p className={styles.portraitName}>A Legacy Preserved</p>
+                <p className={styles.portraitMeta}>MamaBase Beneficiary</p>
               </div>
             </div>
           </div>
@@ -101,7 +96,7 @@ export default function HumanStory() {
           <p>Amara&rsquo;s story is one of 7,883. Your donation writes the next one.</p>
           <a href="#donate" className="btn btn-primary" id="story-donate-cta">
             <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}><path strokeLinecap="round" strokeLinejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" /></svg>
-            Give ₦20,000. Keep a mother alive.
+            Give ₦40,000. Keep a mother alive.
           </a>
         </div>
       </div>

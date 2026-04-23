@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import styles from "./DonationSection.module.css";
 
@@ -11,7 +12,7 @@ const tiers = [
     impact: "Provides safe birthing kits to mothers in need and pays for 4 ante-natal visits.",
     items: ["Safe birthing kit", "4 Ante-natal visits", "Maternal screening"],
     badge: null,
-    color: "var(--clr-primary-light)",
+    color: "var(--clr-primary-border)",
   },
   {
     id: "tier-50",
@@ -78,7 +79,19 @@ export default function DonationSection() {
               role="radio"
               aria-checked={selected === tier.id}
               tabIndex={0}
-              onKeyDown={(e) => e.key === "Enter" && setSelected(tier.id)}
+              onKeyDown={(e) => {
+                if (e.key === "Enter") setSelected(tier.id);
+                if (e.key === "ArrowRight" || e.key === "ArrowDown") {
+                  const nextIndex = (i + 1) % tiers.length;
+                  setSelected(tiers[nextIndex].id);
+                  document.getElementById(tiers[nextIndex].id)?.focus();
+                }
+                if (e.key === "ArrowLeft" || e.key === "ArrowUp") {
+                  const prevIndex = (i - 1 + tiers.length) % tiers.length;
+                  setSelected(tiers[prevIndex].id);
+                  document.getElementById(tiers[prevIndex].id)?.focus();
+                }
+              }}
               id={tier.id}
             >
               {tier.badge && (
@@ -146,9 +159,12 @@ export default function DonationSection() {
           {/* Impact Visual */}
           <div className={styles.visualSide} aria-hidden="true">
             <div className={styles.imageCard}>
-              <img 
-                src="https://mrhrcollective.org/wp-content/uploads/2025/02/AdobeStock_911734917.jpeg" 
+              <Image 
+                src="https://mrhrcollective.org/wp-content/uploads/2025/01/donate.png" 
                 alt="Impact" 
+                width={500}
+                height={600}
+                quality={85}
                 className={styles.impactImg} 
               />
               <div className={styles.impactBadge}>

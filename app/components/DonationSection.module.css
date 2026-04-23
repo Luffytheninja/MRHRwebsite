@@ -48,13 +48,13 @@
   outline: none;
 }
 .tierCard:hover {
-  border-color: var(--clr-primary-light);
+  border-color: var(--clr-primary-border);
   transform: translateY(-4px);
   box-shadow: var(--shadow-md);
 }
 .tierCard.selected {
   border-color: var(--clr-primary);
-  box-shadow: 0 0 0 4px rgba(124,45,59,0.1), var(--shadow-md);
+  box-shadow: 0 0 0 4px rgba(90, 2, 185, 0.1), var(--shadow-md);
   transform: translateY(-6px);
 }
 
@@ -201,7 +201,7 @@
   transition: all 0.2s;
 }
 .methodItem:hover {
-  border-color: var(--clr-primary-light);
+  border-color: var(--clr-primary-border);
   background: #fff;
 }
 .methodItem svg {
@@ -217,7 +217,7 @@
 
 .urgencyLine {
   font-size: 1rem;
-  color: var(--clr-primary-light);
+  color: var(--clr-primary);
   font-weight: 600;
   font-style: italic;
 }

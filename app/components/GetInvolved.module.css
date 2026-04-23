@@ -46,7 +46,7 @@
 
 .iconWrap {
   width: 72px; height: 72px;
-  background: rgba(212,0,122,0.07);
+  background: var(--clr-primary-surface);
   border-radius: 8px;
   display: flex;
   align-items: center;

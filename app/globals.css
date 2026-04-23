@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap');
+
 
 *, *::before, *::after {
   box-sizing: border-box;
@@ -7,12 +7,16 @@
 }
 
 :root {
-  /* MRHR Brand Colors — Updated to Institutional Navy */
-  --clr-primary:      #333366;
-  --clr-primary-dark: #1F1F47;
-  --clr-primary-light:#4D4D8F;
-  --clr-accent:       #5C5C99;
-  --clr-accent-pink:  #D4007A;    /* Brand Pink Accent */
+  /* MRHR Brand Colors — Uniform Design System */
+  --clr-primary:         #5A02B9; /* Base Purple */
+  --clr-primary-dark:    #3D017D; /* Dark Purple (Hover) */
+  --clr-primary-border:  #B180E8; /* Muted Purple (Border) */
+  --clr-primary-surface: #F4EAFD; /* Light Purple (Surface) */
+
+  --clr-accent-pink:     #FF2183; /* Base Pink */
+  --clr-accent-dark:     #CC1A69; /* Dark Pink (Hover) */
+  --clr-accent-border:   #FF8EBD; /* Muted Pink (Border) */
+  --clr-accent-surface:  #FFF0F6; /* Light Pink (Surface) */
 
   /* Supporting palette */
   --clr-navy:         #0F0F1E;
@@ -139,7 +143,7 @@ h1, h2, h3, h4 {
   background: var(--clr-bg-soft);
   transform: translateY(-2px);
   box-shadow: var(--shadow-sm);
-  color: var(--clr-primary-light);
+  color: var(--clr-primary);
 }
 
 .btn-outline-white {
@@ -191,8 +195,8 @@ h1, h2, h3, h4 {
   border-color: var(--clr-accent-pink);
 }
 .btn-accent:hover {
-  background: #B8006A;
-  border-color: #B8006A;
+  background: var(--clr-accent-dark);
+  border-color: var(--clr-accent-dark);
   transform: translateY(-2px);
   box-shadow: var(--shadow-md);
 }

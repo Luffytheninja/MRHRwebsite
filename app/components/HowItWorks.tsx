@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import { useEffect, useRef } from "react";
 import styles from "./HowItWorks.module.css";
 
@@ -67,7 +68,14 @@ export default function HowItWorks() {
               style={{ transitionDelay: `${0.1 + i * 0.15}s` }}
             >
               <div className={styles.imageWrap}>
-                <img src={item.img} alt={item.title} className={styles.progImg} />
+                <Image 
+                  src={item.img} 
+                  alt={item.title} 
+                  width={400}
+                  height={200}
+                  quality={85}
+                  className={styles.progImg} 
+                />
                 <div className={styles.stepNum}>{item.num}</div>
               </div>
               <h3 className={styles.stepTitle}>{item.title}</h3>
@@ -83,7 +91,7 @@ export default function HowItWorks() {
 
         <div className={`${styles.bottomCta} fade-in`}>
           <p>Want to understand our full intervention model?</p>
-          <a href="#about" className="btn btn-outline">Read Our Strategy</a>
+          <a href="#how-it-works" className="btn btn-outline">Read Our Strategy</a>
         </div>
       </div>
     </section>
