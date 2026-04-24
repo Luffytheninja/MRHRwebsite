@@ -120,34 +120,43 @@
 /* Mobile menu */
 .mobileMenu {
   flex-direction: column;
-  padding: 1rem 1.5rem 1.5rem;
-  background: var(--clr-cream);
-  gap: 0.25rem;
+  padding: 0 1.5rem;
+  background: #fff;
+  gap: 0;
   border-top: 1px solid var(--clr-border);
-  display: none;
+  /* Animatable open/close via max-height + opacity */
+  max-height: 0;
+  overflow: hidden;
   opacity: 0;
-  transform: translateY(-8px);
-  transition: opacity 0.3s ease, transform 0.3s ease;
+  visibility: hidden;
+  transition: max-height 0.35s ease, opacity 0.3s ease, padding 0.3s ease;
   pointer-events: none;
 }
 .mobileMenuOpen {
+  max-height: 400px;
   opacity: 1;
-  transform: translateY(0);
+  visibility: visible;
+  padding: 1rem 1.5rem 1.5rem;
   pointer-events: auto;
 }
 .mobileLink {
-  padding: 0.75rem 0;
+  padding: 0.875rem 0;
   font-weight: 500;
   color: var(--clr-text);
   text-decoration: none;
   border-bottom: 1px solid var(--clr-border);
   font-size: 1rem;
   transition: color 0.2s;
+  display: block;
 }
+.mobileLink:last-of-type { border-bottom: none; }
 .mobileLink:hover { color: var(--clr-primary); }
 .mobileDonate {
   margin-top: 1rem;
   font-size: 0.9375rem;
+  text-align: center;
+  width: 100%;
+  display: block;
 }
 
 @media (max-width: 768px) {

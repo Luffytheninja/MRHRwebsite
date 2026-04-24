@@ -1,12 +1,13 @@
 "use client";
 import Link from "next/link";
 import Image from "next/image";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import styles from "./Header.module.css";
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const headerRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
     const handler = () => setScrolled(window.scrollY > 40);
@@ -14,8 +15,20 @@ export default function Header() {
     return () => window.removeEventListener("scroll", handler);
   }, []);
 
+  // Close mobile menu when clicking outside the header
+  useEffect(() => {
+    if (!menuOpen) return;
+    const handleClickOutside = (e: MouseEvent) => {
+      if (headerRef.current && !headerRef.current.contains(e.target as Node)) {
+        setMenuOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, [menuOpen]);
+
   return (
-    <header className={`${styles.header} ${scrolled ? styles.scrolled : ""}`}>
+    <header ref={headerRef} className={`${styles.header} ${scrolled ? styles.scrolled : ""}`}>
       <div className={`container ${styles.inner}`}>
         {/* Logo */}
         <Link href="/" className={styles.logo} aria-label="MRHR Collective home">
@@ -47,6 +60,7 @@ export default function Header() {
             className={styles.hamburger}
             aria-label={menuOpen ? "Close menu" : "Open menu"}
             aria-expanded={menuOpen}
+            aria-controls="mobile-nav"
             onClick={() => setMenuOpen(!menuOpen)}
           >
             <span className={menuOpen ? styles.barOpen : ""}></span>
@@ -57,7 +71,11 @@ export default function Header() {
       </div>
 
       {/* Mobile menu */}
-      <div className={`${styles.mobileMenu} ${menuOpen ? styles.mobileMenuOpen : ""}`}>
+      <div
+        id="mobile-nav"
+        className={`${styles.mobileMenu} ${menuOpen ? styles.mobileMenuOpen : ""}`}
+        aria-hidden={!menuOpen}
+      >
         <a href="#impact" className={styles.mobileLink} onClick={() => setMenuOpen(false)}>Our Impact</a>
         <a href="#how-it-works" className={styles.mobileLink} onClick={() => setMenuOpen(false)}>What We Do</a>
         <a href="#get-involved" className={styles.mobileLink} onClick={() => setMenuOpen(false)}>Get Involved</a>
