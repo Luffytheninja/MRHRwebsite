@@ -9,10 +9,11 @@
   background: transparent;
 }
 
-.header.scrolled {
-  background: rgba(255, 255, 255, 0.9);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+.header.scrolled,
+:global(.menu-open) {
+  background: rgba(255, 255, 255, 0.98);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   padding: 0.75rem 0;
   box-shadow: var(--shadow-sm);
   border-bottom: 1px solid var(--clr-border);
@@ -34,15 +35,16 @@
 }
 
 .logoImage {
-  height: 48px;
+  height: 44px;
   width: auto;
   transition: all 0.3s ease;
 }
 
-.scrolled .logoImage {
-  filter: brightness(0); /* Turn white logo black on white scrolled bg */
+.scrolled .logoImage,
+:global(.menu-open) .logoImage {
+  filter: brightness(0); /* Turn white logo black on white/light bg */
   opacity: 0.85;
-  height: 40px;
+  height: 38px;
 }
 
 /* Nav */
@@ -110,7 +112,10 @@
   transition: transform 0.3s ease, opacity 0.3s ease;
   transform-origin: center;
 }
-.scrolled .hamburger span { background: var(--clr-primary); }
+.scrolled .hamburger span,
+:global(.menu-open) .hamburger span { 
+  background: var(--clr-primary); 
+}
 
 /* Animate to X when open */
 .hamburger span.barOpen:nth-child(1) { transform: translateY(7px) rotate(45deg); }
@@ -129,14 +134,16 @@
   overflow: hidden;
   opacity: 0;
   visibility: hidden;
-  transition: max-height 0.35s ease, opacity 0.3s ease, padding 0.3s ease;
+  transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease;
   pointer-events: none;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  text-align: center;
 }
 .mobileMenuOpen {
-  max-height: 400px;
+  max-height: 450px;
   opacity: 1;
   visibility: visible;
-  padding: 1rem 1.5rem 1.5rem;
+  padding: 1.5rem;
   pointer-events: auto;
 }
 .mobileLink {
@@ -160,6 +167,12 @@
 }
 
 @media (max-width: 768px) {
+  .header {
+    padding: 1rem 0;
+  }
+  .inner {
+    padding: 0 1.25rem;
+  }
   .nav { display: none; }
   .donateBtn { display: none; }
   .hamburger { display: flex; }

@@ -28,7 +28,10 @@ export default function Header() {
   }, [menuOpen]);
 
   return (
-    <header ref={headerRef} className={`${styles.header} ${scrolled ? styles.scrolled : ""}`}>
+    <header 
+      ref={headerRef} 
+      className={`${styles.header} ${scrolled ? styles.scrolled : ""} ${menuOpen ? "menu-open" : ""}`}
+    >
       <div className={`container ${styles.inner}`}>
         {/* Logo */}
         <Link href="/" className={styles.logo} aria-label="MRHR Collective home">
