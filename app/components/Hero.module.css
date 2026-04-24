@@ -143,13 +143,13 @@
 
 @media (max-width: 900px) {
   .hero {
-    align-items: center; /* Center on mobile for better visibility */
+    align-items: flex-end;
     padding-top: 7rem;
     padding-bottom: 6rem;
   }
-  .headline { font-size: 3.5rem; margin-left: 0; }
-  .content { display: flex; justify-content: center; text-align: center; }
-  .left { align-items: center; max-width: 100%; gap: 1.25rem; }
+  .headline { font-size: 3.5rem; margin-left: -3px; }
+  .content { display: block; text-align: left; }
+  .left { align-items: flex-start; max-width: 100%; gap: 1.25rem; }
 }
 
 @media (max-width: 600px) {
@@ -159,11 +159,12 @@
   }
   .label { font-size: 0.75rem; letter-spacing: 0.2em; }
   .headline { font-size: 2.5rem; line-height: 1.1; margin-bottom: 0.5rem; }
-  .subline { font-size: 1.0625rem; line-height: 1.5; padding: 0 0.5rem; }
+  .subline { font-size: 1.0625rem; line-height: 1.5; padding: 0; }
   .ctas { 
     flex-direction: column; 
+    align-items: flex-start;
     width: 100%; 
-    max-width: 300px; /* Prevent them from stretching too wide */
+    max-width: 280px; 
     gap: 1rem; 
     margin-top: 1.5rem;
   }
