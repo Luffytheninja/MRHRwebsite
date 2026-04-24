@@ -36,7 +36,7 @@ export default function HumanStory() {
             <div className={styles.portraitCard}>
               <div className={styles.portraitBg}>
                 <Image 
-                  src="https://mrhrcollective.org/wp-content/uploads/2025/01/iyalogu2.png" 
+                  src="/images/legacy-preserved.png" 
                   alt="A mother supported by MRHR Collective — Illustrative" 
                   width={600}
                   height={800}
