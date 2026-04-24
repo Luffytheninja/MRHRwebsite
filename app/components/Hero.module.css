@@ -103,29 +103,6 @@
   padding: 1.125rem 2.5rem;
 }
 
-.stats {
-  display: flex;
-  gap: 3rem;
-  margin-top: 3rem;
-  padding-top: 2rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.statItem span {
-  display: block;
-  font-size: 2.25rem;
-  font-weight: 600;
-  color: #fff;
-  line-height: 1.2;
-}
-
-.statItem p {
-  font-size: 0.875rem;
-  color: rgba(255, 255, 255, 0.6);
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  margin: 0.25rem 0 0;
-}
 
 /* Scroll indicator */
 .scrollIndicator {
@@ -167,22 +144,33 @@
 @media (max-width: 900px) {
   .hero {
     align-items: center; /* Center on mobile for better visibility */
-    padding-top: 5rem;
-    padding-bottom: 4rem;
+    padding-top: 7rem;
+    padding-bottom: 6rem;
   }
-  .headline { font-size: 3.5rem; }
+  .headline { font-size: 3.5rem; margin-left: 0; }
   .content { display: flex; justify-content: center; text-align: center; }
-  .left { align-items: center; max-width: 100%; }
-  .stats { gap: 1.5rem; justify-content: center; width: 100%; }
+  .left { align-items: center; max-width: 100%; gap: 1.25rem; }
 }
 
 @media (max-width: 600px) {
   .hero {
-    padding-top: 5rem;
+    padding-top: 8rem;
     padding-bottom: 5rem;
   }
-  .headline { font-size: 2.75rem; }
-  .subline { font-size: 1.125rem; }
-  .ctas { flex-direction: column; width: 100%; }
-  .stats { flex-direction: column; gap: 2rem; align-items: center; }
+  .label { font-size: 0.75rem; letter-spacing: 0.2em; }
+  .headline { font-size: 2.5rem; line-height: 1.1; margin-bottom: 0.5rem; }
+  .subline { font-size: 1.0625rem; line-height: 1.5; padding: 0 0.5rem; }
+  .ctas { 
+    flex-direction: column; 
+    width: 100%; 
+    max-width: 300px; /* Prevent them from stretching too wide */
+    gap: 1rem; 
+    margin-top: 1.5rem;
+  }
+  .primaryCta, .secondaryCta {
+    width: 100%;
+    padding: 1rem 1.5rem;
+    font-size: 0.875rem;
+  }
 }
+

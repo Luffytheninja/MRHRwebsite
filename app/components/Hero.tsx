@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import styles from "./Hero.module.css";
 
 const slideImages = [
@@ -12,7 +12,6 @@ const slideImages = [
 ];
 
 export default function Hero() {
-  const counterRefs = useRef<(HTMLSpanElement | null)[]>([]);
   const [currentSlide, setCurrentSlide] = useState(0);
 
   useEffect(() => {
@@ -22,31 +21,6 @@ export default function Hero() {
     return () => clearInterval(slideTimer);
   }, []);
 
-  useEffect(() => {
-    const targets = [7883, 99.9, 80];
-    const suffixes = ["+", "%", "%"];
-    const durations = [2000, 2000, 2000];
-
-    targets.forEach((target, i) => {
-      const el = counterRefs.current[i];
-      const suffix = suffixes[i];
-      const duration = durations[i];
-      const start = performance.now();
-      const isDecimal = target % 1 !== 0;
-
-      const tick = (now: number) => {
-        const el = counterRefs.current[i];
-        if (!el) return;
-        const elapsed = now - start;
-        const progress = Math.min(elapsed / duration, 1);
-        const eased = 1 - Math.pow(1 - progress, 3);
-        const value = target * eased;
-        el.textContent = (isDecimal ? value.toFixed(1) : Math.round(value).toLocaleString()) + suffix;
-        if (progress < 1) requestAnimationFrame(tick);
-      };
-      setTimeout(() => requestAnimationFrame(tick), 600 + i * 200);
-    });
-  }, []);
 
   return (
     <section className={styles.hero} aria-label="Hero — Childbirth should be a celebration of life">
@@ -91,14 +65,6 @@ export default function Hero() {
             </a>
           </div>
 
-          <div className={styles.stats}>
-            {[["7,883+", "Safe Birth Stories"], ["99.9%", "Survival Rate"], ["80%", "Facility Deliveries"]].map(([val, lbl], i) => (
-              <div key={lbl} className={styles.statItem}>
-                <span ref={el => { counterRefs.current[i] = el; }}>{val}</span>
-                <p>{lbl}</p>
-              </div>
-            ))}
-          </div>
         </div>
       </div>
 
