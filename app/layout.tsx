@@ -11,8 +11,11 @@ export const metadata: Metadata = {
     "We are a collective of clinicians, researchers, and neighbors dedicated to ensuring every mother in Nigeria survives and thrives. Discover how we are breaking the silence and building a system where every birth is a celebration of life.",
   keywords: ["maternal health", "Nigeria NGO", "maternal mortality Lagos", "safe childbirth Nigeria", "MRHR Collective", "reproductive health rights Africa"],
   icons: {
-    icon: "/favicon.ico",
-    apple: "/apple-touch-icon.png",
+    icon: [
+      { url: "/favicon.png", type: "image/png" },
+      { url: "/favicon.ico" },
+    ],
+    apple: "/favicon.png",
   },
   openGraph: {
     title: "MRHR Collective — Giving Life Should Never Mean Losing Yours",

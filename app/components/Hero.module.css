@@ -4,6 +4,7 @@
   display: flex;
   align-items: flex-end;
   overflow: hidden;
+  padding-top: 6rem;
   padding-bottom: 8rem;
   background: var(--clr-primary);
 }
@@ -166,6 +167,7 @@
 @media (max-width: 900px) {
   .hero {
     align-items: center; /* Center on mobile for better visibility */
+    padding-top: 5rem;
     padding-bottom: 4rem;
   }
   .headline { font-size: 3.5rem; }
@@ -176,6 +178,7 @@
 
 @media (max-width: 600px) {
   .hero {
+    padding-top: 5rem;
     padding-bottom: 5rem;
   }
   .headline { font-size: 2.75rem; }
