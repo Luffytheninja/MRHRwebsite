@@ -85,7 +85,7 @@
 .bgOverlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(75deg, rgba(15,15,50,0.85) 0%, rgba(15,15,50,0.4) 50%, rgba(15,15,50,0.2) 100%);
+  background: linear-gradient(75deg, rgba(10,10,30,0.92) 0%, rgba(10,10,30,0.6) 60%, rgba(10,10,30,0.3) 100%);
 }
 
 .ctas {

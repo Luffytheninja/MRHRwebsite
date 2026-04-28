@@ -35,16 +35,16 @@
 }
 
 .logoImage {
-  height: 44px;
+  height: 70px;
   width: auto;
   transition: all 0.3s ease;
 }
 
 .scrolled .logoImage,
 :global(.menu-open) .logoImage {
-  filter: brightness(0); /* Turn white logo black on white/light bg */
-  opacity: 0.85;
-  height: 38px;
+  filter: brightness(0); /* Turn white logo dark on white bg */
+  opacity: 0.9;
+  height: 60px;
 }
 
 /* Nav */

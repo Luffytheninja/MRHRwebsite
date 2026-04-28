@@ -4,13 +4,12 @@ import { useEffect, useRef } from "react";
 import styles from "./SocialProof.module.css";
 
 const partners = [
-  { name: "Sterling One Foundation", logo: "https://mrhrcollective.org/wp-content/uploads/2025/01/sterling-foundation.png" },
-  { name: "Sterling Bank", logo: "https://mrhrcollective.org/wp-content/uploads/2025/01/STERLING.png" },
-  { name: "Nigerian Breweries", logo: "https://mrhrcollective.org/wp-content/uploads/2025/01/AMSTEL.png" },
-  { name: "Redwire Group", logo: "https://mrhrcollective.org/wp-content/uploads/2025/01/REDWIRE.png" },
-  { name: "i-Fitness", logo: "https://mrhrcollective.org/wp-content/uploads/2025/01/IFITNESS.png" },
-  { name: "SOGON", logo: "https://mrhrcollective.org/wp-content/uploads/2025/01/SOGON.png" },
-  { name: "AFEMSON", logo: "https://mrhrcollective.org/wp-content/uploads/2025/01/AFEMSON24.png" },
+  { name: "Sterling One Foundation", logo: "/images/scraped/sterling-foundation.png" },
+  { name: "Lagos State Primary Health Care Board", logo: "/images/scraped/LSPHCB.png" },
+  { name: "Lagos State Ministry of Health", logo: "/images/scraped/LSMOH.png" },
+  { name: "AFEMSON", logo: "/images/scraped/AFEMSON24.png" },
+  { name: "SOGON", logo: "/images/scraped/SOGON.png" },
+  { name: "Redwire Marketing", logo: "/images/scraped/REDWIRE.png" },
 ];
 
 const testimonials = [

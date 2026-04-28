@@ -260,3 +260,81 @@ h1, h2, h3, h4 {
 
 /* ── Selection ───────────────────────────────────── */
 ::selection { background: var(--clr-primary); color: #fff; }
+
+/* ── Accessibility ────────────────────────────────── */
+/* Visually hidden but readable by screen readers */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* Allow section-label to centre when needed */
+.section-label[style*="center"],
+.section-label.center {
+  justify-content: center;
+}
+
+/* Two-column layout that collapses at tablet */
+.grid-2col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: center;
+}
+@media (max-width: 900px) {
+  .grid-2col {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}
+
+/* Auto-fit cards */
+.grid-auto-4 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 2rem;
+}
+.grid-auto-3 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+.grid-auto-2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 3rem;
+}
+
+/* Page section padding */
+.page-section {
+  padding: 7rem 1rem;
+}
+.page-section--dark {
+  background: var(--clr-navy);
+  color: #fff;
+  padding: 7rem 1rem;
+}
+.page-section--soft {
+  background: var(--clr-off-white);
+  padding: 7rem 1rem;
+}
+.page-section--tinted {
+  background: var(--clr-primary-surface);
+  padding: 7rem 1rem;
+}
+
+@media (max-width: 768px) {
+  .page-section,
+  .page-section--dark,
+  .page-section--soft,
+  .page-section--tinted {
+    padding: 4rem 1rem;
+  }
+}

@@ -13,10 +13,10 @@ interface Stat {
 
 const stats: Stat[] = [
   {
-    value: 7883,
+    value: 59450,
     suffix: "",
-    label: "Safe Birth Stories",
-    context: "Mothers in our care who have navigated their pregnancy journeys with full support.",
+    label: "Women Impacted",
+    context: "Total mothers and girls supported through our programs across Nigeria in 2025.",
     icon: (
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
     ),
@@ -24,37 +24,37 @@ const stats: Stat[] = [
   {
     value: 99.9,
     suffix: "%",
-    label: "Survival Rate",
-    context: "A verified commitment to keeping mothers alive when they give life.",
+    label: "Maternal Survival",
+    context: "A verified survival rate for all women registered under our flagship MamaBase program.",
     icon: (
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
     ),
   },
   {
-    value: 80,
-    suffix: "%",
-    label: "Facility Deliveries",
-    context: "Transitioning birth from untreated home environments to safe healthcare facilities.",
+    value: 11055,
+    suffix: "+",
+    label: "Iyaloju Outreach",
+    context: "Underserved women reached with essential maternal health services and education.",
     icon: (
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
     ),
   },
   {
-    value: 60,
-    suffix: "%",
-    label: "Antenatal Completion",
-    context: "The critical milestone of four or more essential health check-ups before birth.",
+    value: 431,
+    suffix: "",
+    label: "Workers Trained",
+    context: "Health facility birth attendants trained in Emergency Obstetric Care (EmOC).",
     icon: (
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect width="8" height="4" x="8" y="2" rx="1" ry="1"/><path d="M9 14l2 2 4-4"/></svg>
     ),
   },
   {
-    value: 36,
-    suffix: "%",
-    label: "Community Reach",
-    context: "Of all primary healthcare deliveries in Lagos now supported by our collective.",
+    value: 1938749,
+    suffix: "",
+    label: "Radio Reach",
+    context: "People sensitized on maternal health and Respectful Maternity Care (RMC) via media.",
     icon: (
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="8" width="20" height="14" rx="2"/><path d="M5 3v5"/><path d="M9 3v5"/><path d="M13 3v5"/><path d="M17 3v5"/><path d="M21 3v5"/></svg>
     ),
   },
 ];

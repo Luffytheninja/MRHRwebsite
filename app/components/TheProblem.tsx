@@ -34,36 +34,36 @@ export default function TheProblem() {
               <div className={styles.tensionStats}>
                 <div className={styles.tensionRow}>
                   <div className={styles.tensionBar}>
-                    <div className={styles.tensionFill} style={{ width: "82%", background: "var(--clr-primary)" }} />
+                    <div className={styles.tensionFill} style={{ width: "28.5%", background: "var(--clr-primary)" }} />
                   </div>
-                  <span>1 in 22 Nigerian mothers faces this risk</span>
+                  <span>Nigeria accounts for 28.5% of global maternal deaths</span>
                 </div>
                 <div className={styles.tensionRow}>
                   <div className={styles.tensionBar}>
-                    <div className={styles.tensionFill} style={{ width: "65%", background: "var(--clr-gold)" }} />
+                    <div className={styles.tensionFill} style={{ width: "91.2%", background: "var(--clr-gold)" }} />
                   </div>
-                  <span>512 lives lost per 100,000 births</span>
+                  <span>912 deaths per 100,000 live births (2023)</span>
                 </div>
               </div>
               <div className={styles.tensionClock}>
                 <div className={styles.clockPulse} aria-hidden="true" />
-                <p>A tragedy occurs every <strong>10 minutes</strong>. Most are preventable.</p>
+                <p>82,000 lives lost in a single year. Most are <strong>preventable</strong>.</p>
               </div>
             </div>
           </div>
 
           {/* Right: narrative */}
           <div className={styles.right}>
-            <p className={`section-label fade-in`}>The Reality</p>
+            <p className={`section-label fade-in`}>The Crisis</p>
             <h2 className={`${styles.title} fade-in fade-in-delay-1`}>
               Silence is the<br />Greatest Barrier.
             </h2>
             <div className={`section-divider fade-in fade-in-delay-1`} />
             <p className={`${styles.body} fade-in fade-in-delay-2`}>
-              Haemorrhage, infection, eclampsia — these are medical terms for stories that shouldn&apos;t have ended. In underserved communities, the distance to a clinic isn&apos;t just measured in miles; it&apos;s measured in the cost of a ride and the fear of the unknown.
+              Nigeria carries one of the heaviest maternal mortality burdens in the world. Despite representing just 2.6% of the global population, we account for nearly a third of all maternal deaths globally. These are not just numbers; they are the result of preventable gaps in care.
             </p>
             <p className={`${styles.body} fade-in fade-in-delay-2`}>
-              We believe and prove every day that these deaths are not inevitable. They are a call to action.
+              MRH Collective exists to close these gaps—linking the most vulnerable women to skilled providers and strengthening the systems that serve them.
             </p>
             <div className={`${styles.pullQuote} fade-in fade-in-delay-3`}>
               <div className={styles.pullLine} aria-hidden="true" />

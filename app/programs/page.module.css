@@ -1,0 +1,49 @@
+/* Alternating program row layout */
+.programRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: center;
+}
+
+.programText {
+  order: 1;
+}
+
+.programVisual {
+  order: 2;
+  background-color: var(--clr-bg-soft);
+  border-radius: 12px;
+  min-height: 420px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Reverse: visual left, text right */
+.programRowReverse .programText {
+  order: 2;
+}
+
+.programRowReverse .programVisual {
+  order: 1;
+}
+
+/* On mobile: always text first, visual second — no matter which variant */
+@media (max-width: 900px) {
+  .programRow,
+  .programRowReverse {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .programText,
+  .programRowReverse .programText {
+    order: 1;
+  }
+
+  .programVisual,
+  .programRowReverse .programVisual {
+    order: 2;
+    min-height: 260px;
+  }
+}

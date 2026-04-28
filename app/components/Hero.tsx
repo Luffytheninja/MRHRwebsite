@@ -44,7 +44,7 @@ export default function Hero() {
       <div className={`container ${styles.content}`}>
         <div className={styles.left}>
           <p className={`section-label ${styles.label}`}>
-            LET&apos;S KEEP MOTHERS ALIVE
+            59,450 WOMEN IMPACTED (2025)
           </p>
 
           <h1 className={styles.headline}>
@@ -53,7 +53,7 @@ export default function Hero() {
           </h1>
 
           <p className={styles.subline}>
-            A mother&apos;s heartbeat is the rhythm of a community. In Nigeria, that rhythm is too often silenced by preventable causes. We are a collective dedicated to ensuring every birth story ends with a celebration of life.
+            MRH Collective is Nigeria&apos;s leading research and advocacy organization dedicated to reducing maternal mortality through evidence, community action, and policy influence.
           </p>
 
           <div className={styles.ctas}>

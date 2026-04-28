@@ -34,12 +34,12 @@ export default function Header() {
     >
       <div className={`container ${styles.inner}`}>
         {/* Logo */}
-        <Link href="/" className={styles.logo} aria-label="MRHR Collective home">
+        <Link href="/" className={styles.logo} aria-label="MRH Collective home">
           <Image 
-            src="https://mrhrcollective.org/wp-content/uploads/2025/01/MRH-Logo-White-1-1024x546.png" 
+            src="/images/scraped/MRH-Logo-White-1-1024x546.png" 
             alt="MRH Collective" 
-            width={120}
-            height={64}
+            width={200}
+            height={107}
             className={styles.logoImage}
             priority
           />
@@ -47,17 +47,18 @@ export default function Header() {
 
         {/* Desktop Nav */}
         <nav className={styles.nav} aria-label="Primary navigation">
-          <a href="#impact" className={styles.navLink}>Our Impact</a>
-          <a href="#how-it-works" className={styles.navLink}>What We Do</a>
-          <a href="#get-involved" className={styles.navLink}>Get Involved</a>
-          <a href="https://mrhrcollective.org/news/" className={styles.navLink}>Insights</a>
+          <Link href="/about" className={styles.navLink}>About Us</Link>
+          <Link href="/programs" className={styles.navLink}>Programs</Link>
+          <Link href="/research" className={styles.navLink}>Research</Link>
+          <Link href="/impact" className={styles.navLink}>Impact</Link>
+          <Link href="/news" className={styles.navLink}>News</Link>
         </nav>
 
         {/* CTA */}
         <div className={styles.actions}>
-          <a href="#donate" className={`btn btn-primary ${styles.donateBtn}`} id="header-donate-cta">
-            PROTECT A MOTHER
-          </a>
+          <Link href="/join-us" className={`btn btn-primary ${styles.donateBtn}`} id="header-donate-cta">
+            JOIN THE COLLECTIVE
+          </Link>
           {/* Hamburger */}
           <button
             className={styles.hamburger}
@@ -79,13 +80,14 @@ export default function Header() {
         className={`${styles.mobileMenu} ${menuOpen ? styles.mobileMenuOpen : ""}`}
         aria-hidden={!menuOpen}
       >
-        <a href="#impact" className={styles.mobileLink} onClick={() => setMenuOpen(false)}>Our Impact</a>
-        <a href="#how-it-works" className={styles.mobileLink} onClick={() => setMenuOpen(false)}>What We Do</a>
-        <a href="#get-involved" className={styles.mobileLink} onClick={() => setMenuOpen(false)}>Get Involved</a>
-        <a href="https://mrhrcollective.org/news/" className={styles.mobileLink} onClick={() => setMenuOpen(false)}>Insights</a>
-        <a href="#donate" className={`btn btn-primary ${styles.mobileDonate}`} onClick={() => setMenuOpen(false)}>
-          PROTECT A MOTHER
-        </a>
+        <Link href="/about" className={styles.mobileLink} onClick={() => setMenuOpen(false)}>About Us</Link>
+        <Link href="/programs" className={styles.mobileLink} onClick={() => setMenuOpen(false)}>Programs</Link>
+        <Link href="/research" className={styles.mobileLink} onClick={() => setMenuOpen(false)}>Research</Link>
+        <Link href="/impact" className={styles.mobileLink} onClick={() => setMenuOpen(false)}>Impact</Link>
+        <Link href="/news" className={styles.mobileLink} onClick={() => setMenuOpen(false)}>News</Link>
+        <Link href="/join-us" className={`btn btn-primary ${styles.mobileDonate}`} onClick={() => setMenuOpen(false)}>
+          JOIN THE COLLECTIVE
+        </Link>
       </div>
     </header>
   );

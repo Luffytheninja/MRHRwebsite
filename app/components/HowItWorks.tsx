@@ -6,27 +6,43 @@ import styles from "./HowItWorks.module.css";
 const initiatives = [
   {
     num: "01",
-    img: "https://mrhrcollective.org/wp-content/uploads/2025/01/mamabase-impact.png",
+    img: "/images/hero/hero-1.png",
     title: "MamaBase",
     description:
-      "A data-driven lifeline. We identify and map pregnant women in underserved communities, ensuring every mother is registered, monitored, and supported until her baby is safe at home.",
-    detail: "7,883+ Protected · 99.9% Survival · Direct Support",
+      "A data-driven community e-registry that identifies, registers, and follows up pregnant women in Lagos, focusing on indigent women with no health insurance.",
+    detail: "7,883 Registered · 99.9% Survival · 80% Facility Birth",
   },
   {
     num: "02",
-    img: "https://mrhrcollective.org/wp-content/uploads/2025/02/iyaloju444.png",
+    img: "/images/hero/hero-2.png",
     title: "Iyaloju Initiative",
     description:
-      "Strengthening the health ecosystem. We train frontline workers in emergency care and mobilize communities to break the silence around maternal risks.",
-    detail: "2,040+ Workers Equipped · 1.9M Sensitized · Advocacy",
+      "A systems-directed intervention training birth attendants in Emergency Obstetric Care (EmOC) and strengthening facility data systems.",
+    detail: "11,000+ Women · 431 Workers Trained · 42 Communities",
   },
   {
     num: "03",
-    img: "https://mrhrcollective.org/wp-content/uploads/2025/10/capreman-link-1.png",
+    img: "/images/hero/hero-3.png",
+    title: "MamaLink",
+    description:
+      "An innovative digital platform providing emergency transport and referral support, connecting pregnant women to skilled personnel and transport providers.",
+    detail: "Emergency Transport · Referral Support · Digital Platform",
+  },
+  {
+    num: "04",
+    img: "/images/hero/hero-4.png",
     title: "CAPREMAN",
     description:
-      "Research that saves lives. We conduct clinical implementation research to co-design guidelines for preventing anaemia — a silent but treatable threat in pregnancy.",
-    detail: "Clinical Research · Guideline Design · Specialist Care",
+      "Implementation research to co-design and test frameworks for the screening, prevention, and treatment of anemia during pregnancy and postpartum.",
+    detail: "Research · Anemia Prevention · System Strengthening",
+  },
+  {
+    num: "05",
+    img: "/images/hero/hero-5.png",
+    title: "Cb-ANC",
+    description:
+      "Community-based Ante-Natal Care providing life-saving services in low-income areas, improving outcomes for indigent women.",
+    detail: "Community-based · Zero Mortality · Referral Support",
   },
 ];
 
@@ -50,13 +66,13 @@ export default function HowItWorks() {
     <section id="how-it-works" ref={ref} className={styles.section}>
       <div className="container">
         <div className={styles.header}>
-          <p className="section-label fade-in">Built for Survival</p>
+          <p className="section-label fade-in">Our Pillars: Research, Programs, Advocacy</p>
           <h2 className={`${styles.title} fade-in fade-in-delay-1`}>
-            A System That<br />Reaches First.
+            Transforming Maternal<br />Health Systems.
           </h2>
           <div className="section-divider fade-in fade-in-delay-1" />
           <p className={`${styles.subtitle} fade-in fade-in-delay-2`}>
-            We don&apos;t wait for the tragedy to occur. Our evidence-based pathways ensure that every birth story has a beginning, a middle, and a joyous conclusion.
+            We operate at the intersection of evidence, community action, and policy influence to ensure every African woman has access to quality care.
           </p>
         </div>
 

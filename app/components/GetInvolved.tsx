@@ -44,7 +44,7 @@ const paths = [
     title: "Join the Narrative",
     description: "Awareness is the first step toward action. Share our mission and help us reach those who can help us save a life.",
     cta: "Share the Mission",
-    href: "https://mrhrcollective.org",
+    href: "/about",
   },
 ];
 

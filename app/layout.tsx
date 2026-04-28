@@ -1,15 +1,18 @@
 import type { Metadata } from "next";
 import { Outfit, Playfair_Display } from "next/font/google";
 import "./globals.css";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import FloatingDonate from "./components/FloatingDonate";
 
 const outfit = Outfit({ subsets: ["latin"], weight: ["300", "400", "500", "600", "700"], variable: "--font-sans" });
 const playfair = Playfair_Display({ subsets: ["latin"], style: ["normal", "italic"], variable: "--font-serif" });
 
 export const metadata: Metadata = {
-  title: "MRHR Collective — Giving Life Should Never Mean Losing Yours",
+  title: "MRH Collective — Giving Life Should Never Mean Losing Yours",
   description:
-    "We are a collective of clinicians, researchers, and neighbors dedicated to ensuring every mother in Nigeria survives and thrives. Discover how we are breaking the silence and building a system where every birth is a celebration of life.",
-  keywords: ["maternal health", "Nigeria NGO", "maternal mortality Lagos", "safe childbirth Nigeria", "MRHR Collective", "reproductive health rights Africa"],
+    "MRH Collective is Nigeria's leading multidisciplinary research and advocacy organization dedicated to reducing maternal mortality through evidence, community action, and policy influence.",
+  keywords: ["maternal health", "Nigeria NGO", "maternal mortality Lagos", "safe childbirth Nigeria", "MRH Collective", "reproductive health research Africa"],
   icons: {
     icon: [
       { url: "/favicon.png", type: "image/png" },
@@ -18,7 +21,7 @@ export const metadata: Metadata = {
     apple: "/favicon.png",
   },
   openGraph: {
-    title: "MRHR Collective — Giving Life Should Never Mean Losing Yours",
+    title: "MRH Collective — Giving Life Should Never Mean Losing Yours",
     description:
       "Join the collective protecting the hearts of our communities. Every life saved is a legacy preserved.",
     type: "website",
@@ -28,13 +31,13 @@ export const metadata: Metadata = {
         url: "https://mrhrcollective.org/wp-content/uploads/2025/01/MRH-Logo-White-1-1024x546.png",
         width: 1024,
         height: 546,
-        alt: "MRHR Collective",
+        alt: "MRH Collective",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "MRHR Collective — Giving Life Should Never Mean Losing Yours",
+    title: "MRH Collective — Giving Life Should Never Mean Losing Yours",
     description: "Giving Life Should Never Mean Losing Yours.",
     images: ["https://mrhrcollective.org/wp-content/uploads/2025/01/MRH-Logo-White-1-1024x546.png"],
   },
@@ -45,7 +48,12 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" suppressHydrationWarning className={`${outfit.variable} ${playfair.variable}`}>
-      <body>{children}</body>
+      <body>
+        <Header />
+        {children}
+        <Footer />
+        <FloatingDonate />
+      </body>
     </html>
   );
 }

@@ -1,0 +1,73 @@
+/* Floating Donate Button */
+.floatingBtn {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 200;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.625rem;
+  padding: 0.9rem 1.75rem;
+  background: var(--clr-accent-pink);
+  color: #fff;
+  border-radius: 50px;
+  text-decoration: none;
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 0.8125rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  box-shadow: 0 6px 24px rgba(255, 33, 131, 0.45);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  overflow: visible;
+}
+
+.floatingBtn:hover {
+  transform: translateY(-4px) scale(1.03);
+  box-shadow: 0 12px 36px rgba(255, 33, 131, 0.55);
+  color: #fff;
+}
+
+/* Ripple pulse ring behind the button */
+.pulse {
+  position: absolute;
+  inset: 0;
+  border-radius: 50px;
+  background: var(--clr-accent-pink);
+  opacity: 0;
+  animation: pulseRing 2.5s ease-out infinite;
+  pointer-events: none;
+  z-index: -1;
+}
+
+@keyframes pulseRing {
+  0%   { transform: scale(1);   opacity: 0.55; }
+  100% { transform: scale(1.65); opacity: 0; }
+}
+
+/* Heartbeat on the icon */
+.heart {
+  flex-shrink: 0;
+  animation: heartbeat 1.6s ease-in-out infinite;
+}
+
+@keyframes heartbeat {
+  0%,  100% { transform: scale(1); }
+  14%        { transform: scale(1.18); }
+  28%        { transform: scale(1); }
+  42%        { transform: scale(1.12); }
+  70%        { transform: scale(1); }
+}
+
+/* Mobile — icon-only */
+@media (max-width: 540px) {
+  .floatingBtn {
+    padding: 0.875rem;
+    bottom: 1.5rem;
+    right: 1.5rem;
+    border-radius: 50%;
+    gap: 0;
+  }
+
+  .label { display: none; }
+}

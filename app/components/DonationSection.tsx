@@ -144,7 +144,9 @@ export default function DonationSection() {
             <div className={styles.ctaWrapper}>
               <p className={styles.urgencyLine}>A mother in Lagos is waiting for this care today.</p>
               <a
-                href="https://donate.mrhrcollective.org"
+                href="https://flutterwave.com/donate/zotqysbetmmt"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="btn btn-primary"
                 id="donation-main-cta"
               >
@@ -160,12 +162,13 @@ export default function DonationSection() {
           <div className={styles.visualSide} aria-hidden="true">
             <div className={styles.imageCard}>
               <Image 
-                src="https://mrhrcollective.org/wp-content/uploads/2025/01/donate.png" 
-                alt="Impact" 
+                src="/images/scraped/prog3.png" 
+                alt="Impactful maternal care" 
                 width={500}
                 height={600}
                 quality={85}
                 className={styles.impactImg} 
+                style={{ objectFit: "cover" }}
               />
               <div className={styles.impactBadge}>
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
