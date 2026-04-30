@@ -48,8 +48,7 @@ export default function Hero() {
           </p>
 
           <h1 className={styles.headline}>
-            Giving Life Should<br />
-            Never Mean <em>Losing</em> Yours.
+            Giving life should never mean <span className="serif-italic accent-pink">losing</span> yours.
           </h1>
 
           <p className={styles.subline}>

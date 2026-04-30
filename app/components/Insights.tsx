@@ -24,7 +24,9 @@ export default function Insights() {
       <div className="container">
         <div className={styles.header}>
           <p className="section-label fade-in">Insights</p>
-          <h2 className={`${styles.title} fade-in fade-in-delay-1`}>Knowledge that Drives Action</h2>
+          <h2 className={`${styles.title} fade-in fade-in-delay-1`}>
+            Knowledge that drives action.
+          </h2>
           <div className="section-divider fade-in fade-in-delay-1" />
           <p className={`${styles.subtitle} fade-in fade-in-delay-2`}>
             Our thinking on maternal health — evidence, programme learnings, and the arguments that matter.

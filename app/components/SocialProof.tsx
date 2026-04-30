@@ -63,7 +63,9 @@ export default function SocialProof() {
         {/* Testimonials */}
         <div className={styles.header}>
           <p className="section-label fade-in">Testimonials</p>
-          <h2 className={`${styles.title} fade-in fade-in-delay-1`}>What Partners Say</h2>
+          <h2 className={`${styles.title} fade-in fade-in-delay-1`}>
+            What partners say.
+          </h2>
           <div className="section-divider fade-in fade-in-delay-1" />
         </div>
 

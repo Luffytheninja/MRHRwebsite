@@ -101,7 +101,9 @@ export default function ImpactSnapshot() {
       <div className="container">
         <div className={styles.header}>
           <p className="section-label">Impact Snapshot</p>
-          <h2 className={styles.title}>Numbers That Represent Lives</h2>
+          <h2 className={styles.title}>
+            Numbers that represent lives.
+          </h2>
           <div className="section-divider" />
           <p className={styles.subtitle}>
             Behind every statistic is a mother who came home to her family.

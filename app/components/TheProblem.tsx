@@ -40,7 +40,7 @@ export default function TheProblem() {
                 </div>
                 <div className={styles.tensionRow}>
                   <div className={styles.tensionBar}>
-                    <div className={styles.tensionFill} style={{ width: "91.2%", background: "var(--clr-gold)" }} />
+                    <div className={styles.tensionFill} style={{ width: "91.2%", background: "var(--clr-accent-pink)" }} />
                   </div>
                   <span>912 deaths per 100,000 live births (2023)</span>
                 </div>
@@ -56,7 +56,7 @@ export default function TheProblem() {
           <div className={styles.right}>
             <p className={`section-label fade-in`}>The Crisis</p>
             <h2 className={`${styles.title} fade-in fade-in-delay-1`}>
-              Silence is the<br />Greatest Barrier.
+              Silence is the greatest barrier.
             </h2>
             <div className={`section-divider fade-in fade-in-delay-1`} />
             <p className={`${styles.body} fade-in fade-in-delay-2`}>

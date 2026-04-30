@@ -61,7 +61,7 @@ export default function DonationSection() {
           <p className="section-label">
             Extend Your Hand
           </p>
-          <h2 className={`${styles.title} fade-in`}>Your Choice is Her Chance</h2>
+          <h2 className={`${styles.title} fade-in`}>Your choice is her chance.</h2>
           <div className="section-divider fade-in" />
           <p className={`${styles.subtitle} fade-in fade-in-delay-1`}>
             Maternal mortality isn&apos;t just a statistic — it&apos;s a daughter losing a guide, a family losing its heart. Your contribution below is a direct, verified intervention that writes a different ending.

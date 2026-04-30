@@ -65,7 +65,9 @@ export default function GetInvolved() {
       <div className="container">
         <div className={styles.header}>
           <p className="section-label fade-in">The Power of the Collective</p>
-          <h2 className={`${styles.title} fade-in fade-in-delay-1`}>Many paths, one mission.</h2>
+          <h2 className={`${styles.title} fade-in fade-in-delay-1`}>
+            Many paths, one mission.
+          </h2>
           <div className="section-divider fade-in fade-in-delay-1" />
           <p className={`${styles.subtitle} fade-in fade-in-delay-2`}>
             While direct support is vital, lasting change requires a community of voices and hands. Discover how you can lend yours.

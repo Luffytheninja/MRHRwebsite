@@ -26,7 +26,7 @@ export default function HumanStory() {
         {/* Section header */}
         <div className={`${styles.sectionHeader} fade-in`}>
           <p className="section-label">A Life Protected</p>
-          <h2 className={styles.title}>Every mother&apos;s heartbeat<br />is her family&apos;s story.</h2>
+          <h2 className={styles.title}>Every mother's heartbeat is her family's story.</h2>
           <div className="section-divider" />
         </div>
 

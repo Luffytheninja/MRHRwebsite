@@ -68,7 +68,7 @@ export default function HowItWorks() {
         <div className={styles.header}>
           <p className="section-label fade-in">Our Pillars: Research, Programs, Advocacy</p>
           <h2 className={`${styles.title} fade-in fade-in-delay-1`}>
-            Transforming Maternal<br />Health Systems.
+            Transforming health systems.
           </h2>
           <div className="section-divider fade-in fade-in-delay-1" />
           <p className={`${styles.subtitle} fade-in fade-in-delay-2`}>
