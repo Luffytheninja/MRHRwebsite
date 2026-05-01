@@ -1,6 +1,6 @@
 "use client";
-import PageHero from "./components/PageHero";
-import { ProgressRing, Counter } from "./components/ImpactComponents";
+import PageHero from "../components/PageHero";
+import { ProgressRing, Counter } from "../components/ImpactComponents";
 
 export default function DesignSystemPage() {
   return (
