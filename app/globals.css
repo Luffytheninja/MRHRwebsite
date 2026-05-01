@@ -169,7 +169,7 @@ h4 {
 
 @media (max-width: 768px) {
   .container, .container--narrow {
-    padding: 0 1.25rem;
+    padding: 0 1.5rem;
   }
 }
 
