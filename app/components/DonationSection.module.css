@@ -4,6 +4,12 @@
   overflow: hidden;
 }
 
+@media (max-width: 768px) {
+  .section {
+    padding: 3.5rem 0;
+  }
+}
+
 .bgLayer {
   position: absolute;
   inset: 0;

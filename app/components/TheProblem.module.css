@@ -5,6 +5,12 @@
   overflow: hidden;
 }
 
+@media (max-width: 768px) {
+  .section {
+    padding: 3.5rem 0;
+  }
+}
+
 .grid {
   display: grid;
   grid-template-columns: 1fr 1fr;

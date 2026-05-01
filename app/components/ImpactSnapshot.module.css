@@ -4,6 +4,12 @@
   position: relative;
 }
 
+@media (max-width: 768px) {
+  .section {
+    padding: 3.5rem 0;
+  }
+}
+
 .topBand {
   position: absolute;
   top: 0; left: 0; right: 0;
@@ -113,4 +119,7 @@
 }
 @media (max-width: 640px) {
   .grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 480px) {
+  .grid { grid-template-columns: 1fr; }
 }

@@ -1,7 +1,14 @@
 .section {
   padding: 6rem 0;
+  background: #fff;
   position: relative;
   overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 4rem 0;
+  }
 }
 
 .bgLayer {

@@ -1,6 +1,12 @@
 .section {
   padding: 5rem 0;
-  background: var(--clr-warm-white);
+  background: var(--clr-primary-surface);
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 3.5rem 0;
+  }
 }
 
 /* Partners */

@@ -1,6 +1,14 @@
 .section {
   padding: 5rem 0;
-  background: var(--clr-bg-soft);
+  background: var(--clr-navy);
+  color: #fff;
+  position: relative;
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 3.5rem 0;
+  }
 }
 
 .header {

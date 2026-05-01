@@ -67,8 +67,8 @@ export default function AboutPage() {
       {/* ── Photo Break — full-bleed community moment ─ */}
       <section style={{ position: "relative", minHeight: "40vh", overflow: "hidden" }}>
         <Image
-          src="/images/scraped/iyalogu.png"
-          alt="MRH Collective community outreach"
+          src="/images/scraped/PROF-AFOLABI.png"
+          alt="Prof. Bosede Afolabi, Founder"
           fill
           style={{ objectFit: "cover", objectPosition: "center 30%" }}
           priority

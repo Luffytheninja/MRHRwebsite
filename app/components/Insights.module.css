@@ -1,6 +1,13 @@
 .section {
   padding: 5rem 0;
-  background: #fff;
+  background: var(--clr-off-white);
+  border-top: 1px solid var(--clr-border);
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 3.5rem 0;
+  }
 }
 
 .header {

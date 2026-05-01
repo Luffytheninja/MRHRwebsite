@@ -167,6 +167,12 @@ h4 {
   padding: 0 var(--sp-md);
 }
 
+@media (max-width: 768px) {
+  .container, .container--narrow {
+    padding: 0 1.25rem;
+  }
+}
+
 /* ── Buttons ─────────────────────────────────────── */
 .btn {
   display: inline-flex;
@@ -377,20 +383,20 @@ h4 {
 
 /* Page section padding */
 .page-section {
-  padding: 7rem 1rem;
+  padding: 7rem 0;
 }
 .page-section--dark {
   background: var(--clr-navy);
   color: #fff;
-  padding: 7rem 1rem;
+  padding: 7rem 0;
 }
 .page-section--soft {
   background: var(--clr-off-white);
-  padding: 7rem 1rem;
+  padding: 7rem 0;
 }
 .page-section--tinted {
   background: var(--clr-primary-surface);
-  padding: 7rem 1rem;
+  padding: 7rem 0;
 }
 
 @media (max-width: 768px) {
@@ -398,6 +404,6 @@ h4 {
   .page-section--dark,
   .page-section--soft,
   .page-section--tinted {
-    padding: 4rem 1rem;
+    padding: 4rem 0;
   }
 }

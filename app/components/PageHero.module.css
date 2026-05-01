@@ -33,17 +33,7 @@
   );
 }
 
-/* Subtle left-side accent bar */
-.pageHero::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  width: 5px;
-  background: linear-gradient(to bottom, var(--clr-primary), var(--clr-accent-pink));
-  z-index: 4;
-}
+/* Removed left-side accent bar per user request for simplicity */
 
 .bottomGradient {
   display: none; /* Removed for a more refined, sharp editorial look */
