@@ -42,7 +42,7 @@ export default function AboutPage() {
         }
         subtitle="Since 2007, MRH Collective has led the research, programs, and advocacy that strengthen Nigeria's health systems — so every mother can survive childbirth."
         label="ABOUT US — FOUNDED 2007"
-        backgroundImage="/images/hero/hero-1.png"
+        backgroundImage="/images/hero/prog3.png"
         cta={{ label: "See Our Impact", href: "/impact" }}
         ctaSecondary={{ label: "Join the Movement", href: "/join-us" }}
       />
