@@ -48,21 +48,19 @@ export default function AboutPage() {
       />
 
       {/* ── Why We Exist ─────────────────────────── */}
-      <section className="page-section">
-        <div className="container">
-          <div style={{ maxWidth: "820px", margin: "0 auto" }}>
-            <p className="section-label">WHY WE EXIST</p>
-            <div className="section-divider" />
-            <h2>
-              A professor watched women die. She decided to stop it.
-            </h2>
-            <p style={{ fontSize: "1.15rem", lineHeight: "1.85", color: "var(--clr-text-muted)", marginBottom: "2rem" }}>
-              MRH Collective was founded by a Professor of Obstetrics &amp; Gynaecology who had seen — firsthand — the needless deaths of women during childbirth. She built this organisation on a single conviction: that with the right evidence, programs, and advocacy, maternal death is preventable.
-            </p>
-            <p style={{ fontSize: "1.05rem", lineHeight: "1.8", color: "var(--clr-text-muted)" }}>
-              Today, we operate across Lagos State and beyond, working alongside governments, clinicians, and communities to close the gap between life-saving knowledge and life-saving action.
-            </p>
-          </div>
+      <section className="page-section container">
+        <div style={{ maxWidth: "820px", margin: "0 auto" }}>
+          <p className="section-label">WHY WE EXIST</p>
+          <div className="section-divider" />
+          <h2>
+            A professor watched women die. She decided to stop it.
+          </h2>
+          <p style={{ fontSize: "1.15rem", lineHeight: "1.85", color: "var(--clr-text-muted)", marginBottom: "2rem" }}>
+            MRH Collective was founded by a Professor of Obstetrics &amp; Gynaecology who had seen — firsthand — the needless deaths of women during childbirth. She built this organisation on a single conviction: that with the right evidence, programs, and advocacy, maternal death is preventable.
+          </p>
+          <p style={{ fontSize: "1.05rem", lineHeight: "1.8", color: "var(--clr-text-muted)" }}>
+            Today, we operate across Lagos State and beyond, working alongside governments, clinicians, and communities to close the gap between life-saving knowledge and life-saving action.
+          </p>
         </div>
       </section>
 
@@ -121,33 +119,31 @@ export default function AboutPage() {
       </section>
 
       {/* ── Core Values ──────────────────────────── */}
-      <section className="page-section">
-        <div className="container">
-          <div style={{ textAlign: "center", marginBottom: "4rem" }}>
-            <p className="section-label" style={{ justifyContent: "center" }}>OUR CORE VALUES</p>
-            <h2>
-              The principles that guide us
-            </h2>
-          </div>
+      <section className="page-section container">
+        <div style={{ textAlign: "center", marginBottom: "4rem" }}>
+          <p className="section-label" style={{ justifyContent: "center" }}>OUR CORE VALUES</p>
+          <h2>
+            The principles that guide us
+          </h2>
+        </div>
 
-          <div className="grid-auto-4">
-            {values.map((value, idx) => (
-              <div key={idx} style={{
-                padding: "2.5rem 2rem",
-                backgroundColor: "var(--clr-off-white)",
-                borderRadius: "8px",
-                position: "relative",
-                overflow: "hidden"
-              }}>
-                <span style={{
-                  position: "absolute", top: "1.5rem", right: "1.75rem",
-                  fontSize: "1.5rem", color: "var(--clr-primary)", opacity: 0.15, lineHeight: 1
-                }} aria-hidden="true">{value.icon}</span>
-                <h4 style={{ color: "var(--clr-primary)", marginBottom: "0.625rem", fontSize: "1rem" }}>{value.title}</h4>
-                <p style={{ fontSize: "0.9375rem", color: "var(--clr-text-muted)", lineHeight: "1.65" }}>{value.text}</p>
-              </div>
-            ))}
-          </div>
+        <div className="grid-auto-4">
+          {values.map((value, idx) => (
+            <div key={idx} style={{
+              padding: "2.5rem 2rem",
+              backgroundColor: "var(--clr-off-white)",
+              borderRadius: "8px",
+              position: "relative",
+              overflow: "hidden"
+            }}>
+              <span style={{
+                position: "absolute", top: "1.5rem", right: "1.75rem",
+                fontSize: "1.5rem", color: "var(--clr-primary)", opacity: 0.15, lineHeight: 1
+              }} aria-hidden="true">{value.icon}</span>
+              <h4 style={{ color: "var(--clr-primary)", marginBottom: "0.625rem", fontSize: "1rem" }}>{value.title}</h4>
+              <p style={{ fontSize: "0.9375rem", color: "var(--clr-text-muted)", lineHeight: "1.65" }}>{value.text}</p>
+            </div>
+          ))}
         </div>
       </section>
 
@@ -217,43 +213,41 @@ export default function AboutPage() {
       </section>
 
       {/* ── Team Photography strip ────────────────── */}
-      <section className="page-section">
-        <div className="container">
-          <div style={{ textAlign: "center", marginBottom: "3.5rem" }}>
-            <p className="section-label" style={{ justifyContent: "center" }}>THE PEOPLE BEHIND THE WORK</p>
-            <h2>
-              Led by experts. Driven by purpose.
-            </h2>
-            <p style={{ color: "var(--clr-text-muted)", maxWidth: "560px", margin: "0 auto", lineHeight: "1.7" }}>
-              Our team spans obstetrics, public health, research, policy, and community mobilisation — united by the belief that maternal death is never inevitable.
-            </p>
-          </div>
+      <section className="page-section container">
+        <div style={{ textAlign: "center", marginBottom: "3.5rem" }}>
+          <p className="section-label" style={{ justifyContent: "center" }}>THE PEOPLE BEHIND THE WORK</p>
+          <h2>
+            Led by experts. Driven by purpose.
+          </h2>
+          <p style={{ color: "var(--clr-text-muted)", maxWidth: "560px", margin: "0 auto", lineHeight: "1.7" }}>
+            Our team spans obstetrics, public health, research, policy, and community mobilisation — united by the belief that maternal death is never inevitable.
+          </p>
+        </div>
 
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: "2.5rem" }}>
-            {[
-              { img: "/images/scraped/PROF-AFOLABI.png", name: "Prof. Bosede Afolabi", role: "Founder & Executive Director" },
-              { img: "/images/scraped/DR-AISHA.png", name: "Dr. Aisha Abdullahi", role: "Research Lead" },
-              { img: "/images/scraped/DR-OLADIPO.png", name: "Dr. Oladipo", role: "Clinical Programs" },
-              { img: "/images/scraped/MARYAM-ALIKO.png", name: "Maryam Aliko", role: "Partnerships & Advocacy" },
-            ].map((member, i) => (
-              <div key={i} style={{ textAlign: "center" }}>
-                <div style={{
-                  position: "relative", width: "100%", paddingBottom: "110%",
-                  borderRadius: "8px", overflow: "hidden", marginBottom: "1rem",
-                  boxShadow: "var(--shadow-md)", backgroundColor: "var(--clr-bg-soft)"
-                }}>
-                  <Image
-                    src={member.img}
-                    alt={member.name}
-                    fill
-                    style={{ objectFit: "cover", objectPosition: "top" }}
-                  />
-                </div>
-                <h4 style={{ marginBottom: "0.25rem", fontSize: "0.9375rem" }}>{member.name}</h4>
-                <p style={{ fontSize: "0.8125rem", color: "var(--clr-text-light)", textTransform: "uppercase", letterSpacing: "0.06em" }}>{member.role}</p>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: "2.5rem" }}>
+          {[
+            { img: "/images/scraped/PROF-AFOLABI.png", name: "Prof. Bosede Afolabi", role: "Founder & Executive Director" },
+            { img: "/images/scraped/DR-AISHA.png", name: "Dr. Aisha Abdullahi", role: "Research Lead" },
+            { img: "/images/scraped/DR-OLADIPO.png", name: "Dr. Oladipo", role: "Clinical Programs" },
+            { img: "/images/scraped/MARYAM-ALIKO.png", name: "Maryam Aliko", role: "Partnerships & Advocacy" },
+          ].map((member, i) => (
+            <div key={i} style={{ textAlign: "center" }}>
+              <div style={{
+                position: "relative", width: "100%", paddingBottom: "110%",
+                borderRadius: "8px", overflow: "hidden", marginBottom: "1rem",
+                boxShadow: "var(--shadow-md)", backgroundColor: "var(--clr-bg-soft)"
+              }}>
+                <Image
+                  src={member.img}
+                  alt={member.name}
+                  fill
+                  style={{ objectFit: "cover", objectPosition: "top" }}
+                />
               </div>
-            ))}
-          </div>
+              <h4 style={{ marginBottom: "0.25rem", fontSize: "0.9375rem" }}>{member.name}</h4>
+              <p style={{ fontSize: "0.8125rem", color: "var(--clr-text-light)", textTransform: "uppercase", letterSpacing: "0.06em" }}>{member.role}</p>
+            </div>
+          ))}
         </div>
       </section>
 

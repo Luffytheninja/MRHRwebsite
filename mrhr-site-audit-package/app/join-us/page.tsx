@@ -25,68 +25,66 @@ export default function JoinUsPage() {
       />
 
       {/* Giving options */}
-      <section className="page-section">
-        <div className="container">
-          <div style={{ textAlign: "center", marginBottom: "4rem" }}>
-            <p className="section-label" style={{ justifyContent: "center" }}>SUPPORT OUR WORK</p>
-            <h2>
-              Fund a life-saving intervention.
-            </h2>
-            <p style={{ color: "var(--clr-text-muted)", maxWidth: "560px", margin: "0 auto", fontSize: "1.1rem" }}>
-              Every donation directly powers our on-the-ground programs.
+      <section className="page-section container">
+        <div style={{ textAlign: "center", marginBottom: "4rem" }}>
+          <p className="section-label" style={{ justifyContent: "center" }}>SUPPORT OUR WORK</p>
+          <h2>
+            Fund a life-saving intervention.
+          </h2>
+          <p style={{ color: "var(--clr-text-muted)", maxWidth: "560px", margin: "0 auto", fontSize: "1.1rem" }}>
+            Every donation directly powers our on-the-ground programs.
+          </p>
+        </div>
+
+        <div className="grid-auto-2">
+          {/* One-time donation */}
+          <div style={{ padding: "3.5rem", backgroundColor: "white", borderRadius: "12px", borderTop: "4px solid var(--clr-primary)", display: "flex", flexDirection: "column", boxShadow: "var(--shadow-md)" }}>
+            <h3 style={{ marginBottom: "1rem" }}>Individual Giving</h3>
+            <p style={{ color: "var(--clr-text-muted)", marginBottom: "2rem", lineHeight: "1.75", flex: 1 }}>
+              Your donation directly funds life-saving programs that provide respectful maternity care, education, and support to underserved women.
             </p>
+            <ul style={{ listStyle: "none", padding: 0, marginBottom: "2.5rem", display: "grid", gap: "0.875rem" }}>
+              {[
+                "Prenatal and postnatal care support",
+                "Health worker training and education",
+                "Emergency transport coordination"
+              ].map((item, i) => (
+                <li key={i} style={{ display: "flex", gap: "0.75rem", fontSize: "0.9375rem", alignItems: "flex-start" }}>
+                  <span style={{ color: "var(--clr-primary)", fontWeight: "800", marginTop: "0.1rem" }} aria-hidden="true">✓</span>
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+            <a
+              href="https://flutterwave.com/donate/zotqysbetmmt"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn-primary"
+              style={{ justifyContent: "center" }}
+            >
+              DONATE NOW
+            </a>
           </div>
 
-          <div className="grid-auto-2">
-            {/* One-time donation */}
-            <div style={{ padding: "3.5rem", backgroundColor: "white", borderRadius: "12px", borderTop: "4px solid var(--clr-primary)", display: "flex", flexDirection: "column", boxShadow: "var(--shadow-md)" }}>
-              <h3 style={{ marginBottom: "1rem" }}>Individual Giving</h3>
-              <p style={{ color: "var(--clr-text-muted)", marginBottom: "2rem", lineHeight: "1.75", flex: 1 }}>
-                Your donation directly funds life-saving programs that provide respectful maternity care, education, and support to underserved women.
-              </p>
-              <ul style={{ listStyle: "none", padding: 0, marginBottom: "2.5rem", display: "grid", gap: "0.875rem" }}>
-                {[
-                  "Prenatal and postnatal care support",
-                  "Health worker training and education",
-                  "Emergency transport coordination"
-                ].map((item, i) => (
-                  <li key={i} style={{ display: "flex", gap: "0.75rem", fontSize: "0.9375rem", alignItems: "flex-start" }}>
-                    <span style={{ color: "var(--clr-primary)", fontWeight: "800", marginTop: "0.1rem" }} aria-hidden="true">✓</span>
-                    <span>{item}</span>
-                  </li>
-                ))}
-              </ul>
-              <a
-                href="https://flutterwave.com/donate/zotqysbetmmt"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn btn-primary"
-                style={{ justifyContent: "center" }}
-              >
-                DONATE NOW
-              </a>
+          {/* Monthly giving */}
+          <div style={{ padding: "3.5rem", backgroundColor: "var(--clr-primary-surface)", borderRadius: "12px", borderTop: "4px solid var(--clr-accent-pink)", display: "flex", flexDirection: "column", boxShadow: "var(--shadow-md)" }}>
+            <h3 style={{ marginBottom: "1rem" }}>Become a Lifeline</h3>
+            <p style={{ color: "var(--clr-text-muted)", marginBottom: "2rem", lineHeight: "1.75", flex: 1 }}>
+              Your consistent monthly support helps us deliver continuous care, education, and advocacy for maternal health — ensuring reliable impact all year round.
+            </p>
+            <div style={{ padding: "1.5rem", backgroundColor: "white", borderRadius: "8px", marginBottom: "2.5rem" }}>
+              <p style={{ fontSize: "0.75rem", fontWeight: "800", color: "var(--clr-primary)", textTransform: "uppercase", letterSpacing: "0.1em" }}>Monthly Impact</p>
+              <p style={{ fontSize: "1.05rem", marginTop: "0.5rem", lineHeight: "1.6", fontWeight: "500" }}>Ensures reliable prenatal care for 5+ mothers every single month.</p>
             </div>
-
-            {/* Monthly giving */}
-            <div style={{ padding: "3.5rem", backgroundColor: "var(--clr-primary-surface)", borderRadius: "12px", borderTop: "4px solid var(--clr-accent-pink)", display: "flex", flexDirection: "column", boxShadow: "var(--shadow-md)" }}>
-              <h3 style={{ marginBottom: "1rem" }}>Become a Lifeline</h3>
-              <p style={{ color: "var(--clr-text-muted)", marginBottom: "2rem", lineHeight: "1.75", flex: 1 }}>
-                Your consistent monthly support helps us deliver continuous care, education, and advocacy for maternal health — ensuring reliable impact all year round.
-              </p>
-              <div style={{ padding: "1.5rem", backgroundColor: "white", borderRadius: "8px", marginBottom: "2.5rem" }}>
-                <p style={{ fontSize: "0.75rem", fontWeight: "800", color: "var(--clr-primary)", textTransform: "uppercase", letterSpacing: "0.1em" }}>Monthly Impact</p>
-                <p style={{ fontSize: "1.05rem", marginTop: "0.5rem", lineHeight: "1.6", fontWeight: "500" }}>Ensures reliable prenatal care for 5+ mothers every single month.</p>
-              </div>
-              <a
-                href="https://flutterwave.com/donate/zotqysbetmmt"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn btn-accent"
-                style={{ justifyContent: "center" }}
-              >
-                BECOME A LIFELINE
-              </a>
-            </div>
+            <a
+              href="https://flutterwave.com/donate/zotqysbetmmt"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn-accent"
+              style={{ justifyContent: "center" }}
+            >
+              BECOME A LIFELINE
+            </a>
           </div>
         </div>
       </section>

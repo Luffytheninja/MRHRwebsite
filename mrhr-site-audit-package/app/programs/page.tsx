@@ -72,68 +72,66 @@ export default function ProgramsPage() {
         cta={{ label: "View Our Research", href: "/research" }}
       />
 
-      <section ref={sectionRef} className="page-section">
-        <div className="container">
-          <div style={{ display: "flex", flexDirection: "column", gap: "9rem" }}>
-            {programs.map((program, idx) => (
-              <div key={program.id} id={program.id} className={`${styles.programRow} ${idx % 2 !== 0 ? styles.programRowReverse : ""}`}>
-                {/* Text */}
-                <div className={styles.programText}>
-                  <p className="section-label">PROGRAM 0{idx + 1}</p>
-                  <h2 style={{ marginBottom: "1.5rem" }}>{program.title}</h2>
-                  <p style={{ fontSize: "1.1rem", color: "var(--clr-text-muted)", marginBottom: "2.5rem", lineHeight: "1.75" }}>
-                    {program.description}
-                  </p>
+      <section ref={sectionRef} className="page-section container">
+        <div style={{ display: "flex", flexDirection: "column", gap: "9rem" }}>
+          {programs.map((program, idx) => (
+            <div key={program.id} id={program.id} className={`${styles.programRow} ${idx % 2 !== 0 ? styles.programRowReverse : ""}`}>
+              {/* Text */}
+              <div className={styles.programText}>
+                <p className="section-label">PROGRAM 0{idx + 1}</p>
+                <h2 style={{ marginBottom: "1.5rem" }}>{program.title}</h2>
+                <p style={{ fontSize: "1.1rem", color: "var(--clr-text-muted)", marginBottom: "2.5rem", lineHeight: "1.75" }}>
+                  {program.description}
+                </p>
 
-                  {/* Infographic impact section */}
-                  <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))", gap: "1rem", marginBottom: "2.5rem" }}>
-                    {program.infographic.map((stat, i) => (
-                      <div key={i} style={{
-                        padding: "1.5rem",
-                        background: "var(--clr-off-white)",
-                        borderRadius: "12px",
-                        position: "relative",
-                        overflow: "hidden",
-                        border: "1px solid var(--clr-border)"
+                {/* Infographic impact section */}
+                <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))", gap: "1rem", marginBottom: "2.5rem" }}>
+                  {program.infographic.map((stat, i) => (
+                    <div key={i} style={{
+                      padding: "1.5rem",
+                      background: "var(--clr-off-white)",
+                      borderRadius: "12px",
+                      position: "relative",
+                      overflow: "hidden",
+                      border: "1px solid var(--clr-border)"
+                    }}>
+                      {stat.isRing && (
+                        <div style={{ position: "absolute", top: "1rem", right: "1rem", opacity: 0.4 }}>
+                          <ProgressRing pct={stat.val} active={active} color={stat.color} size={40} />
+                        </div>
+                      )}
+                      <p style={{
+                        fontSize: "1.75rem",
+                        fontWeight: "800",
+                        color: "var(--clr-primary)",
+                        lineHeight: 1,
+                        marginBottom: "0.5rem"
                       }}>
-                        {stat.isRing && (
-                          <div style={{ position: "absolute", top: "1rem", right: "1rem", opacity: 0.4 }}>
-                            <ProgressRing pct={stat.val} active={active} color={stat.color} size={40} />
-                          </div>
-                        )}
-                        <p style={{
-                          fontSize: "1.75rem",
-                          fontWeight: "800",
-                          color: "var(--clr-primary)",
-                          lineHeight: 1,
-                          marginBottom: "0.5rem"
-                        }}>
-                          <Counter value={stat.val} suffix={stat.suffix} active={active} decimals={stat.val % 1 !== 0 ? 1 : 0} />
-                        </p>
-                        <p style={{ fontSize: "0.75rem", fontWeight: "700", textTransform: "uppercase", letterSpacing: "0.05em", color: "var(--clr-text)" }}>{stat.label}</p>
-                        <p style={{ fontSize: "0.6875rem", color: "var(--clr-text-light)", marginTop: "0.25rem" }}>{stat.context}</p>
-                      </div>
-                    ))}
-                  </div>
-
-                  <p style={{ fontSize: "0.9375rem", color: "var(--clr-text-light)", lineHeight: "1.6", borderLeft: "2px solid var(--clr-border)", paddingLeft: "1.5rem" }}>
-                    {program.details}
-                  </p>
+                        <Counter value={stat.val} suffix={stat.suffix} active={active} decimals={stat.val % 1 !== 0 ? 1 : 0} />
+                      </p>
+                      <p style={{ fontSize: "0.75rem", fontWeight: "700", textTransform: "uppercase", letterSpacing: "0.05em", color: "var(--clr-text)" }}>{stat.label}</p>
+                      <p style={{ fontSize: "0.6875rem", color: "var(--clr-text-light)", marginTop: "0.25rem" }}>{stat.context}</p>
+                    </div>
+                  ))}
                 </div>
 
-                {/* Visual card */}
-                <div className={styles.programVisual}>
-                  <Image
-                    src={program.img}
-                    alt={program.title}
-                    fill
-                    style={{ objectFit: "cover" }}
-                  />
-                  <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: "4px", background: "linear-gradient(90deg, var(--clr-primary), var(--clr-accent-pink))" }} aria-hidden="true" />
-                </div>
+                <p style={{ fontSize: "0.9375rem", color: "var(--clr-text-light)", lineHeight: "1.6", borderLeft: "2px solid var(--clr-border)", paddingLeft: "1.5rem" }}>
+                  {program.details}
+                </p>
               </div>
-            ))}
-          </div>
+
+              {/* Visual card */}
+              <div className={styles.programVisual}>
+                <Image
+                  src={program.img}
+                  alt={program.title}
+                  fill
+                  style={{ objectFit: "cover" }}
+                />
+                <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: "4px", background: "linear-gradient(90deg, var(--clr-primary), var(--clr-accent-pink))" }} aria-hidden="true" />
+              </div>
+            </div>
+          ))}
         </div>
       </section>
 

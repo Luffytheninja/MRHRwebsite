@@ -55,40 +55,38 @@ export default function ResearchPage() {
       />
 
       {/* Intro section */}
-      <section className="page-section">
-        <div className="container">
-          <div className="grid-2col">
-            <div>
-              <div className="section-divider" />
-              <h2>
-                Mapping the system to change it.
-              </h2>
-              <p style={{ fontSize: "1.1rem", color: "var(--clr-text-muted)", lineHeight: "1.85", marginBottom: "2.5rem" }}>
-                Despite massive investments in maternal health, critical data remains unavailable or underused. By mapping systems and listening to women and frontline workers, our research uncovers what truly works — ensuring interventions are guided by reality, not assumptions.
-              </p>
-              <div className="grid-auto-2">
-                {[
-                  "Health System Mapping",
-                  "User-Centered Research",
-                  "Data Audit & Quality",
-                  "Implementation Science",
-                  "Clinical Trials",
-                  "Feasibility Studies"
-                ].map((area, i) => (
-                  <div key={i} style={{ padding: "1rem 1.25rem", background: "var(--clr-off-white)", borderRadius: "4px", borderLeft: "3px solid var(--clr-primary)" }}>
-                    <p style={{ fontWeight: "700", fontSize: "0.875rem", color: "var(--clr-text)" }}>{area}</p>
-                  </div>
-                ))}
-              </div>
+      <section className="page-section container">
+        <div className="grid-2col">
+          <div>
+            <div className="section-divider" />
+            <h2>
+              Mapping the system to change it.
+            </h2>
+            <p style={{ fontSize: "1.1rem", color: "var(--clr-text-muted)", lineHeight: "1.85", marginBottom: "2.5rem" }}>
+              Despite massive investments in maternal health, critical data remains unavailable or underused. By mapping systems and listening to women and frontline workers, our research uncovers what truly works — ensuring interventions are guided by reality, not assumptions.
+            </p>
+            <div className="grid-auto-2">
+              {[
+                "Health System Mapping",
+                "User-Centered Research",
+                "Data Audit & Quality",
+                "Implementation Science",
+                "Clinical Trials",
+                "Feasibility Studies"
+              ].map((area, i) => (
+                <div key={i} style={{ padding: "1rem 1.25rem", background: "var(--clr-off-white)", borderRadius: "4px", borderLeft: "3px solid var(--clr-primary)" }}>
+                  <p style={{ fontWeight: "700", fontSize: "0.875rem", color: "var(--clr-text)" }}>{area}</p>
+                </div>
+              ))}
             </div>
-            <div style={{ position: "relative", minHeight: "450px", borderRadius: "12px", overflow: "hidden", boxShadow: "var(--shadow-lg)" }}>
-              <Image
-                src="/images/scraped/IMAGINE-3-6-1024x683.webp"
-                alt="Researcher conducting community outreach"
-                fill
-                style={{ objectFit: "cover" }}
-              />
-            </div>
+          </div>
+          <div style={{ position: "relative", minHeight: "450px", borderRadius: "12px", overflow: "hidden", boxShadow: "var(--shadow-lg)" }}>
+            <Image
+              src="/images/scraped/IMAGINE-3-6-1024x683.webp"
+              alt="Researcher conducting community outreach"
+              fill
+              style={{ objectFit: "cover" }}
+            />
           </div>
         </div>
       </section>

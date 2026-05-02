@@ -218,17 +218,15 @@ export default function ImpactPage() {
       />
 
       {/* ── The Crisis Context ────────────────────── */}
-      <section className="page-section">
-        <div className="container">
-          <div style={{ maxWidth: "760px", margin: "0 auto", textAlign: "center" }}>
-            <p className="section-label" style={{ justifyContent: "center" }}>THE SILENT CRISIS</p>
-            <h2>
-              Nigeria. 2.6% of the world's population. 28.5% of maternal deaths.
-            </h2>
-            <p style={{ fontSize: "1.1rem", color: "var(--clr-text-muted)", lineHeight: "1.75" }}>
-              Despite decades of commitment, the maternal mortality ratio remains critically above global targets. MRH Collective exists to change that — with evidence, programs, and relentless advocacy.
-            </p>
-          </div>
+      <section className="page-section container">
+        <div style={{ maxWidth: "760px", margin: "0 auto", textAlign: "center" }}>
+          <p className="section-label" style={{ justifyContent: "center" }}>THE SILENT CRISIS</p>
+          <h2>
+            Nigeria. 2.6% of the world's population. 28.5% of maternal deaths.
+          </h2>
+          <p style={{ fontSize: "1.1rem", color: "var(--clr-text-muted)", lineHeight: "1.75" }}>
+            Despite decades of commitment, the maternal mortality ratio remains critically above global targets. MRH Collective exists to change that — with evidence, programs, and relentless advocacy.
+          </p>
         </div>
       </section>
 
@@ -269,45 +267,43 @@ export default function ImpactPage() {
       </section>
 
       {/* ── Programme Reach Bar Chart ─────────────── */}
-      <section className="page-section">
-        <div className="container">
-          <div className="grid-2col">
-            <div>
-              <p className="section-label">PROGRAMME REACH</p>
-              <h2>
-                Geographic reach by program
-              </h2>
-              <p style={{ color: "var(--clr-text-muted)", marginBottom: "2.5rem", lineHeight: "1.7" }}>
-                From dense urban slums to peri-urban communities — our programs meet women exactly where they are.
-              </p>
-              <BarChart
-                bars={[
-                  { label: "MamaBase (Phase 1 + 2)", value: 7883, max: 25000, color: "var(--clr-primary)" },
-                  { label: "Iyaloju Initiative", value: 11055, max: 25000, color: "var(--clr-accent-pink)" },
-                  { label: "MamaLink Transport", value: 2400, max: 25000, color: "#1a7a4a" },
-                  { label: "Clinical Training", value: 2471, max: 25000, color: "#b45309" },
-                ]}
-                active={active}
-              />
-            </div>
+      <section className="page-section container">
+        <div className="grid-2col">
+          <div>
+            <p className="section-label">PROGRAMME REACH</p>
+            <h2>
+              Geographic reach by program
+            </h2>
+            <p style={{ color: "var(--clr-text-muted)", marginBottom: "2.5rem", lineHeight: "1.7" }}>
+              From dense urban slums to peri-urban communities — our programs meet women exactly where they are.
+            </p>
+            <BarChart
+              bars={[
+                { label: "MamaBase (Phase 1 + 2)", value: 7883, max: 25000, color: "var(--clr-primary)" },
+                { label: "Iyaloju Initiative", value: 11055, max: 25000, color: "var(--clr-accent-pink)" },
+                { label: "MamaLink Transport", value: 2400, max: 25000, color: "#1a7a4a" },
+                { label: "Clinical Training", value: 2471, max: 25000, color: "#b45309" },
+              ]}
+              active={active}
+            />
+          </div>
 
-            <div style={{ position: "relative", minHeight: "420px", borderRadius: "12px", overflow: "hidden", boxShadow: "var(--shadow-lg)" }}>
-              <Image
-                src="/images/scraped/impact-slider-578x1024.png"
-                alt="MRH Collective community impact"
-                fill
-                style={{ objectFit: "cover", objectPosition: "center" }}
-              />
-              <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to top, rgba(0,0,0,0.7), transparent 55%)" }} />
-              <div style={{ position: "absolute", bottom: "2.5rem", left: "2.5rem", right: "2.5rem" }}>
-                <blockquote style={{
-                  fontFamily: "var(--font-serif)", fontSize: "clamp(1.1rem, 2vw, 1.4rem)",
-                  color: "#fff", lineHeight: "1.5", fontStyle: "italic", marginBottom: "1rem"
-                }}>
-                  &ldquo;Data is the most powerful tool for advocacy. By showing the numbers, we make the invisible visible.&rdquo;
-                </blockquote>
-                <p style={{ color: "var(--clr-accent-border)", fontWeight: "700", fontSize: "0.8125rem" }}>— MRH Research Team</p>
-              </div>
+          <div style={{ position: "relative", minHeight: "420px", borderRadius: "12px", overflow: "hidden", boxShadow: "var(--shadow-lg)" }}>
+            <Image
+              src="/images/scraped/impact-slider-578x1024.png"
+              alt="MRH Collective community impact"
+              fill
+              style={{ objectFit: "cover", objectPosition: "center" }}
+            />
+            <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to top, rgba(0,0,0,0.7), transparent 55%)" }} />
+            <div style={{ position: "absolute", bottom: "2.5rem", left: "2.5rem", right: "2.5rem" }}>
+              <blockquote style={{
+                fontFamily: "var(--font-serif)", fontSize: "clamp(1.1rem, 2vw, 1.4rem)",
+                color: "#fff", lineHeight: "1.5", fontStyle: "italic", marginBottom: "1rem"
+              }}>
+                &ldquo;Data is the most powerful tool for advocacy. By showing the numbers, we make the invisible visible.&rdquo;
+              </blockquote>
+              <p style={{ color: "var(--clr-accent-border)", fontWeight: "700", fontSize: "0.8125rem" }}>— MRH Research Team</p>
             </div>
           </div>
         </div>
@@ -389,31 +385,29 @@ export default function ImpactPage() {
       </section>
 
       {/* ── Partner Logos ─────────────────────────── */}
-      <section className="page-section">
-        <div className="container">
-          <p className="section-label" style={{ justifyContent: "center" }}>OUR PARTNERS</p>
-          <h2 style={{ textAlign: "center", marginBottom: "1rem" }}>
-            Impact amplified through partnership
-          </h2>
-          <p style={{ textAlign: "center", color: "var(--clr-text-muted)", marginBottom: "3.5rem", maxWidth: "520px", margin: "0 auto 3.5rem" }}>
-            We work alongside institutions who share our conviction that maternal death is preventable.
-          </p>
+      <section className="page-section container">
+        <p className="section-label" style={{ justifyContent: "center" }}>OUR PARTNERS</p>
+        <h2 style={{ textAlign: "center", marginBottom: "1rem" }}>
+          Impact amplified through partnership
+        </h2>
+        <p style={{ textAlign: "center", color: "var(--clr-text-muted)", marginBottom: "3.5rem", maxWidth: "520px", margin: "0 auto 3.5rem" }}>
+          We work alongside institutions who share our conviction that maternal death is preventable.
+        </p>
 
-          <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "center", alignItems: "center", gap: "2rem 3rem" }}>
-            {[
-              "JHPIEGO", "CHAI", "Sterling One Foundation",
-              "Bella Disu Foundation", "Redwire Marketing", "Nigerian Breweries", "SOGON", "AFEMSON"
-            ].map((partner, i) => (
-              <span key={i} style={{
-                fontSize: "0.75rem", fontWeight: "800", letterSpacing: "0.18em",
-                textTransform: "uppercase", color: "var(--clr-text-light)",
-                padding: "0.75rem 1.5rem", border: "1px solid var(--clr-border)",
-                borderRadius: "4px"
-              }}>
-                {partner}
-              </span>
-            ))}
-          </div>
+        <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "center", alignItems: "center", gap: "2rem 3rem" }}>
+          {[
+            "JHPIEGO", "CHAI", "Sterling One Foundation",
+            "Bella Disu Foundation", "Redwire Marketing", "Nigerian Breweries", "SOGON", "AFEMSON"
+          ].map((partner, i) => (
+            <span key={i} style={{
+              fontSize: "0.75rem", fontWeight: "800", letterSpacing: "0.18em",
+              textTransform: "uppercase", color: "var(--clr-text-light)",
+              padding: "0.75rem 1.5rem", border: "1px solid var(--clr-border)",
+              borderRadius: "4px"
+            }}>
+              {partner}
+            </span>
+          ))}
         </div>
       </section>
 

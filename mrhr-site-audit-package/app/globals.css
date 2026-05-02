@@ -1,0 +1,409 @@
+
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  /* MRHR Brand Colors — Uniform Design System */
+  --clr-primary:         #5A02B9; /* Base Purple */
+  --clr-primary-dark:    #3D017D; /* Dark Purple (Hover) */
+  --clr-primary-border:  #B180E8; /* Muted Purple (Border) */
+  --clr-primary-surface: #F4EAFD; /* Light Purple (Surface) */
+
+  --clr-accent-pink:     #FF2183; /* Base Pink */
+  --clr-accent-dark:     #CC1A69; /* Dark Pink (Hover) */
+  --clr-accent-border:   #FF8EBD; /* Muted Pink (Border) */
+  --clr-accent-surface:  #FFF0F6; /* Light Pink (Surface) */
+
+  /* Supporting palette */
+  --clr-navy:         #0F0F1E;
+  --clr-navy-mid:     #1A1A3A;
+  --clr-gold:         #A6894A;    /* Muted institutional gold */
+  --clr-gold-light:   #C4A45A;
+  --clr-off-white:    #F8F9FA;
+
+  /* Neutrals */
+  --clr-white:        #FFFFFF;
+  --clr-cream:        #FDFCFA;
+  --clr-warm-white:   #F9F9F7;
+  --clr-bg-soft:      #F0F2F5;
+  --clr-text:         #1A1B1E;
+  --clr-text-muted:   #4A4D55;
+  --clr-text-light:   #888E96;
+  --clr-border:       #E9ECEF;
+
+  /* Brand fonts — Delicate, Feminine, Formal, Modern */
+  --font-sans:  'Outfit', system-ui, sans-serif;
+  --font-serif: 'Playfair Display', serif;
+
+  /* Spacing — Institutional scale */
+  --sp-xs:  0.5rem;
+  --sp-sm:  1rem;
+  --sp-md:  2.5rem;
+  --sp-lg:  5rem;
+  --sp-xl:  8rem;
+
+  /* Layout */
+  --container: 1200px;
+  --container-narrow: 760px;
+
+  /* Border radius system — sharp and clean */
+  --radius-xs: 1px;
+  --radius-sm: 2px;
+  --radius-md: 4px;
+  --radius-lg: 8px;
+
+  /* Motion */
+  --ease-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-bounce: cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  /* Shadows — extremely subtle */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.04);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.05);
+  --shadow-lg: 0 12px 32px rgba(0, 0, 0, 0.08);
+  --shadow-xl: 0 24px 64px rgba(15, 15, 30, 0.12);
+  --shadow-card: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+  scroll-padding-top: 72px; /* Account for fixed header height */
+}
+
+body {
+  font-family: var(--font-sans);
+  color: var(--clr-text);
+  background: var(--clr-white);
+  line-height: 1.7;
+  font-weight: 300;
+  letter-spacing: 0.01em;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+/* ── Typography ──────────────────────────────────── */
+/* Single source of truth for all headings. Do NOT override font-family inline. */
+h1, h2, h3, h4 {
+  font-family: var(--font-sans);
+  line-height: 1.2;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+/* H1: Page title — bold, commanding */
+h1 {
+  font-size: clamp(2.75rem, 5.5vw, 4.5rem);
+  font-weight: 800;
+  line-height: 1.08;
+  margin-bottom: 1.25rem;
+}
+
+/* H2: Section header — strong presence */
+h2 {
+  font-size: clamp(1.875rem, 3.5vw, 2.75rem);
+  font-weight: 700;
+  line-height: 1.15;
+  margin-bottom: 1.25rem;
+}
+
+/* H3: Subsection — clear hierarchy */
+h3 {
+  font-size: clamp(1.25rem, 2vw, 1.625rem);
+  font-weight: 600;
+  line-height: 1.3;
+  margin-bottom: 0.875rem;
+}
+
+h4 {
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.4;
+  margin-bottom: 0.625rem;
+}
+
+/* ── Moving-word treatment: colored italic serif ─── */
+/* Apply .serif-italic to <em> or <span> inside any heading */
+.serif-italic {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 400;
+  color: var(--clr-primary);
+  letter-spacing: 0;
+}
+
+.serif-italic.accent-pink {
+  color: var(--clr-accent-pink);
+}
+
+.serif-italic.accent-white {
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.serif-italic.accent-gold {
+  color: var(--clr-gold-light);
+}
+
+/* ── Utility: Text Colors ────────────────────────── */
+.text-primary { color: var(--clr-primary); }
+.text-accent-pink { color: var(--clr-accent-pink); }
+.text-muted { color: var(--clr-text-muted); }
+.text-light { color: var(--clr-text-light); }
+.text-white { color: #fff; }
+
+
+/* ── Container ───────────────────────────────────── */
+.container {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 var(--sp-md);
+}
+.container--narrow {
+  max-width: var(--container-narrow);
+  margin: 0 auto;
+  padding: 0 var(--sp-md);
+}
+
+@media (max-width: 768px) {
+  .container, .container--narrow {
+    padding: 0 1.5rem;
+  }
+}
+
+/* ── Buttons ─────────────────────────────────────── */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 0.875rem;
+  padding: 0.875rem 2rem;
+  border-radius: 4px;
+  border: 2px solid transparent;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.25s var(--ease-smooth);
+  white-space: nowrap;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.btn-primary {
+  background: var(--clr-primary);
+  color: #fff;
+  border-color: var(--clr-primary);
+}
+.btn-primary:hover {
+  background: var(--clr-primary-dark);
+  border-color: var(--clr-primary-dark);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-white {
+  background: #fff;
+  color: var(--clr-primary);
+  border-color: #fff;
+}
+.btn-white:hover {
+  background: var(--clr-bg-soft);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
+  color: var(--clr-primary);
+}
+
+.btn-outline-white {
+  background: transparent;
+  color: #fff;
+  border-color: rgba(255,255,255,0.4);
+}
+.btn-outline-white:hover {
+  background: rgba(255,255,255,0.08);
+  border-color: #fff;
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--clr-primary);
+  border-color: var(--clr-primary);
+}
+.btn-outline:hover {
+  background: var(--clr-primary);
+  color: #fff;
+}
+
+/* btn-gold — warm copper CTA (alias to primary, distinct on dark sections) */
+.btn-gold {
+  background: var(--clr-primary);
+  color: #fff;
+  border-color: var(--clr-primary);
+}
+.btn-gold:hover {
+  background: var(--clr-primary-dark);
+  border-color: var(--clr-primary-dark);
+  transform: translateY(-2px);
+}
+
+/* btn-outline-dark — outlined on light backgrounds */
+.btn-outline-dark {
+  background: transparent;
+  color: var(--clr-text);
+  border-color: var(--clr-text);
+}
+.btn-outline-dark:hover {
+  background: var(--clr-text);
+  color: #fff;
+}
+
+.btn-accent {
+  background: var(--clr-accent-pink);
+  color: #fff;
+  border-color: var(--clr-accent-pink);
+}
+.btn-accent:hover {
+  background: var(--clr-accent-dark);
+  border-color: var(--clr-accent-dark);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+/* ── Section label ────────────────────────────────── */
+.section-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.6875rem;
+  font-weight: 800;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--clr-primary);
+  margin-bottom: 0.875rem;
+}
+
+/* ── Section divider ─────────────────────────────── */
+.section-divider {
+  width: 48px;
+  height: 3px;
+  background: var(--clr-primary);
+  border-radius: 2px;
+  margin: 1rem 0 1.75rem;
+  position: relative;
+}
+.section-divider::after {
+  content: '';
+  position: absolute;
+  right: -8px;
+  top: 0;
+  width: 3px;
+  height: 3px;
+  background: var(--clr-accent-pink);
+  border-radius: 50%;
+}
+.section-divider--center {
+  margin: 1rem auto 1.75rem;
+}
+
+/* ── Fade-in animation ────────────────────────────── */
+.fade-in {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.65s var(--ease-smooth), transform 0.65s var(--ease-smooth);
+}
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.fade-in-delay-1 { transition-delay: 0.1s; }
+.fade-in-delay-2 { transition-delay: 0.2s; }
+.fade-in-delay-3 { transition-delay: 0.3s; }
+.fade-in-delay-4 { transition-delay: 0.4s; }
+
+/* ── Scrollbar ───────────────────────────────────── */
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: #fff; }
+::-webkit-scrollbar-thumb { background: var(--clr-primary); border-radius: 3px; }
+
+/* ── Selection ───────────────────────────────────── */
+::selection { background: var(--clr-primary); color: #fff; }
+
+/* ── Accessibility ────────────────────────────────── */
+/* Visually hidden but readable by screen readers */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* Allow section-label to centre when needed */
+.section-label[style*="center"],
+.section-label.center {
+  justify-content: center;
+}
+
+/* Two-column layout that collapses at tablet */
+.grid-2col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: center;
+}
+@media (max-width: 900px) {
+  .grid-2col {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}
+
+/* Auto-fit cards */
+.grid-auto-4 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 2rem;
+}
+.grid-auto-3 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+.grid-auto-2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 3rem;
+}
+
+/* Page section padding */
+.page-section {
+  padding: 7rem 0;
+}
+.page-section--dark {
+  background: var(--clr-navy);
+  color: #fff;
+  padding: 7rem 0;
+}
+.page-section--soft {
+  background: var(--clr-off-white);
+  padding: 7rem 0;
+}
+.page-section--tinted {
+  background: var(--clr-primary-surface);
+  padding: 7rem 0;
+}
+
+@media (max-width: 768px) {
+  .page-section,
+  .page-section--dark,
+  .page-section--soft,
+  .page-section--tinted {
+    padding: 4rem 0;
+  }
+}
